@@ -1,4 +1,4 @@
-name: Validate Pull Request Branch
+name: Protect the main branch from Pull Requests
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  validate-pull-request-branch:
+  check-pull-request-branch:
     runs-on: ubuntu-latest
     steps:
     - name: Check Pull Request Head Branch
