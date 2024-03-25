@@ -1,4 +1,4 @@
-name: Branch Protection
+name: Validate Pull Request Branch
 
 on:
   pull_request:
@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  check_base_branch:
+  validate-pull-request-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Pull Request Incoming Branch
-        run: |
-          if [[ "${{ github.event.pull_request.head.ref }}" != "release" && "${{ github.event.pull_request.head.ref }}" != "hotfix"]]; then
-            echo "Pull requests to the main branch are only allowed from the release branch. (except for the hotfix branch)"
-            exit 1
-          fi
+    - name: Check Pull Request Head Branch
+      run: |
+        if [[ "${{ github.event.pull_request.head.ref }}" != "release" && "${{ github.event.pull_request.head.ref }}" != "hotfix" ]]; then
+          echo "Pull requests to the main branch are only allowed from the release branch. (except for the hotfix branch)"
+          exit 1
+        fi
