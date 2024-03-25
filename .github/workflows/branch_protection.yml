@@ -1,0 +1,17 @@
+name: Branch Protection
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check_base_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Pull Request Incoming Branch
+        run: |
+          if [[ "${{ github.event.pull_request.head.ref }}" != "release" && "${{ github.event.pull_request.head.ref }}" != "hotfix"]]; then
+            echo "Pull requests to the main branch are only allowed from the release branch. (except for the hotfix branch)"
+            exit 1
+          fi
