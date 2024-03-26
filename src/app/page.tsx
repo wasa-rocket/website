@@ -3,6 +3,7 @@ import Rockoon from "@/components/rockoon";
 import Rocket from "@/components/rocket";
 import Image from "next/image";
 import Cansat from "@/components/cansat";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Rockoon />
       <Rocket />
       <Cansat />
+      <Footer />
     </>
   );
 }
