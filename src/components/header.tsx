@@ -14,6 +14,12 @@ export default function Header({ elements }: { elements: string[] }) {
     { title: "Career", link: "/career" },
   ];
 
+  const hamburgerMenuElementHidden = [
+    { title: "ROCKOON", link: "/ROCKOON" },
+    { title: "ROCKET", link: "/ROCKET" },
+    { title: "CANSAT", link: "/CANSAT" },
+  ];
+
   const [hamburgerMenuHidden, setHamburgerMenuHidden] = useState(true);
   const { scrollY } = useScroll();
   const [navHidden, setNavHidden] = useState(false);
@@ -39,14 +45,16 @@ export default function Header({ elements }: { elements: string[] }) {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed z-50 w-full"
     >
-      <nav className=" flex flex-row bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70">
-        <Image
-          src="/logo/logoBoldWide_25.png"
-          alt="logo"
-          width={180}
-          height={100}
-          className="md:hidden block mb-[-25px] mt-[-17px] mx-auto"
-        />
+      <nav className="bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70">
+        <Link href="/" className="md:hidden block mb-[-25px] mt-[-17px] w-full">
+          <Image
+            src="/logo/logoBoldWide_25.png"
+            alt="logo"
+            width={180}
+            height={100}
+            className="mx-auto"
+          />
+        </Link>
         <ul className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12">
           <li className="md:my-4 my-0">
             <Link href="/">
@@ -73,21 +81,19 @@ export default function Header({ elements }: { elements: string[] }) {
               );
             })}
         </ul>
-        <button
-          className="z-50 absolute right-8 top-8 text-white font-semibold text-right tracking-wider md:my-auto mt-[-12px]"
-          onClick={() => {
-            setHamburgerMenuHidden(
-              (hamburgerMenuHidden) => !hamburgerMenuHidden
-            );
-          }}
-        >
-          <MenuButton
-            isOpen={!hamburgerMenuHidden}
-            color="white"
-            strokeWidth={2}
-          />
-        </button>
       </nav>
+      <button
+        className="z-50 absolute right-8 top-8 text-white font-semibold text-right tracking-wider md:my-auto mt-[-12px]"
+        onClick={() => {
+          setHamburgerMenuHidden((hamburgerMenuHidden) => !hamburgerMenuHidden);
+        }}
+      >
+        <MenuButton
+          isOpen={!hamburgerMenuHidden}
+          color="white"
+          strokeWidth={2}
+        />
+      </button>
       <motion.nav
         variants={{
           visible: { x: 0 },
@@ -99,6 +105,15 @@ export default function Header({ elements }: { elements: string[] }) {
         className="absolute h-screen right-0 bg-black bg-clip-padding backdrop-blur-md bg-opacity-70 backdrop-filter w-[250px] z-30 pt-12"
       >
         <ul>
+          {hamburgerMenuElementHidden.map((element) => {
+            return (
+              <li className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 md:hidden block">
+                <Link href={element.link} className=" ">
+                  {element.title}
+                </Link>
+              </li>
+            );
+          })}
           {hamburgerMenuElement.map((element) => {
             return (
               <li className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400">
