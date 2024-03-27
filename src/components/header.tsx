@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Alert from "./alert";
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { MenuButton } from "./menuButton";
+import NavBar from "./navBar";
+import SideBar from "./sideBar";
 
-type Element = {
+export type Element = {
   title: string;
   link: string;
 };
@@ -18,27 +18,26 @@ export default function Header() {
     { title: "ROCKET", link: "/rocket" },
     { title: "CANSAT", link: "/cansat" },
   ];
-  const hamburgerMenuElement: Element[] = [
+  const sideMenuElements: Element[] = [
     { title: "About us", link: "/about" },
 
     { title: "Career", link: "/career" },
   ];
 
-  const hamburgerMenuElementHidden: Element[] = [
+  const sideMenuElementsHidden: Element[] = [
     { title: "ROCKOON", link: "/ROCKOON" },
     { title: "ROCKET", link: "/ROCKET" },
     { title: "CANSAT", link: "/CANSAT" },
   ];
 
-  const [hamburgerMenuHidden, setHamburgerMenuHidden] = useState(true);
+  const [sideMenuHidden, setsideMenuHidden] = useState(true);
   const [navHidden, setNavHidden] = useState(false);
   const { scrollY } = useScroll();
 
-  
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
     if (!previous) return;
-    setHamburgerMenuHidden(true);
+    setsideMenuHidden(true);
     if (latest > previous && latest > 100) {
       setNavHidden(true);
     } else {
@@ -56,104 +55,16 @@ export default function Header() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed z-50 w-full"
     >
-      <nav className="bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70">
-        <Link href="/" className="md:hidden block mb-[-25px] mt-[-17px] w-full">
-          <Image
-            src="/logo/logoBoldWide_25.png"
-            alt="logo"
-            width={180}
-            height={100}
-            className="mx-auto"
-          />
-        </Link>
-        <ul className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12">
-          <li className="md:my-4 my-0" key="image">
-            <Link href="/">
-              <Image
-                src="/logo/logoBold_25.png"
-                alt="logo"
-                width={100}
-                height={100}
-                className="md:block hidden"
-              />
-            </Link>
-          </li>
-          {menuElements &&
-            menuElements.map((element) => {
-              return (
-                <li className="z-50 my-auto" key={element.title}>
-                  <Link
-                    href={`/${element.link}`}
-                    className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
-                  >
-                    {element.title}
-                  </Link>
-                </li>
-              );
-            })}
-        </ul>
-      </nav>
-      <button
-        className="z-50 absolute right-8 top-8 text-white font-semibold text-right tracking-wider md:my-auto mt-[-12px]"
-        onClick={() => {
-          setHamburgerMenuHidden((hamburgerMenuHidden) => !hamburgerMenuHidden);
-        }}
-      >
-        <MenuButton
-          isOpen={!hamburgerMenuHidden}
-          color="white"
-          strokeWidth={2}
-        />
-      </button>
-      <motion.nav
-        variants={{
-          visible: { x: 0 },
-          hidden: { x: "100%" },
-        }}
-        animate={hamburgerMenuHidden ? "hidden" : "visible"}
-        initial="hidden"
-        transition={{ duration: 0.25, delay: 0.1, ease: "easeInOut" }}
-        className="absolute h-screen right-0 bg-black bg-clip-padding backdrop-blur-md bg-opacity-70 backdrop-filter w-[250px] z-30 pt-12"
-      >
-        <ul>
-          {hamburgerMenuElementHidden.map((element) => {
-            return (
-              <Link href={element.link}>
-                <motion.li
-                  variants={{
-                    visible: { opacity: 1 },
-                    hidden: { opacity: 0 },
-                  }}
-                  animate={hamburgerMenuHidden ? "hidden" : "visible"}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 md:hidden block"
-                  key={element.title}
-                >
-                  {element.title}
-                </motion.li>
-              </Link>
-            );
-          })}
-          {hamburgerMenuElement.map((element) => {
-            return (
-              <Link href={element.link} className=" ">
-                <motion.li
-                  variants={{
-                    visible: { opacity: 1 },
-                    hidden: { opacity: 0 },
-                  }}
-                  animate={hamburgerMenuHidden ? "hidden" : "visible"}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 hover:text-gray-300"
-                  key={element.title}
-                >
-                  {element.title}
-                </motion.li>
-              </Link>
-            );
-          })}
-        </ul>
-      </motion.nav>
+      <NavBar
+        menuElements={menuElements}
+        sideMenuHidden={sideMenuHidden}
+        setsideMenuHidden={setsideMenuHidden}
+      />
+      <SideBar
+        sideMenuElements={sideMenuElements}
+        sideMenuElementsHidden={sideMenuElementsHidden}
+        sideMenuHidden={sideMenuHidden}
+      />
       <Alert>
         <span>
           WASAでは新入生を歓迎しています。
