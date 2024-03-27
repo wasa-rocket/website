@@ -12,9 +12,9 @@ export default function HeroPost() {
         </p>
         <Image
           src="/Heroimage1.jpg"
-          alt="Picture of the author"
+          alt="Hero Image"
           fill
-          object-fit="cover"
+         className="object-cover"
         />
       </div>
     </section>

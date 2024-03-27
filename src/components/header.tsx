@@ -80,14 +80,19 @@ export default function Header() {
           {menuElements &&
             menuElements.map((element) => {
               return (
-                <li className="z-50 my-auto" key={element.title}>
+                <motion.li
+                  animate={{ x: 15 }}
+                  transition={{ duration: 0.5, delay: 1 }}
+                  className="z-50 my-auto"
+                  key={element.title}
+                >
                   <Link
                     href={`/${element.link}`}
                     className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
                   >
                     {element.title}
                   </Link>
-                </li>
+                </motion.li>
               );
             })}
         </ul>
@@ -111,32 +116,44 @@ export default function Header() {
         }}
         animate={hamburgerMenuHidden ? "hidden" : "visible"}
         initial="hidden"
-        transition={{ duration: 0.25, ease: "easeInOut" }}
+        transition={{ duration: 0.25, delay: 0.1, ease: "easeInOut" }}
         className="absolute h-screen right-0 bg-black bg-clip-padding backdrop-blur-md bg-opacity-70 backdrop-filter w-[250px] z-30 pt-12"
       >
         <ul>
           {hamburgerMenuElementHidden.map((element) => {
             return (
-              <li
-                className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 md:hidden block"
-                key={element.title}
-              >
-                <Link href={element.link} className=" ">
+              <Link href={element.link}>
+                <motion.li
+                  variants={{
+                    visible: { opacity: 1 },
+                    hidden: { opacity: 0 },
+                  }}
+                  animate={hamburgerMenuHidden ? "hidden" : "visible"}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 md:hidden block"
+                  key={element.title}
+                >
                   {element.title}
-                </Link>
-              </li>
+                </motion.li>
+              </Link>
             );
           })}
           {hamburgerMenuElement.map((element) => {
             return (
-              <li
-                className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400"
-                key={element.title}
-              >
-                <Link href={element.link} className=" ">
+              <Link href={element.link} className=" ">
+                <motion.li
+                  variants={{
+                    visible: { opacity: 1 },
+                    hidden: { opacity: 0 },
+                  }}
+                  animate={hamburgerMenuHidden ? "hidden" : "visible"}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 hover:text-gray-300"
+                  key={element.title}
+                >
                   {element.title}
-                </Link>
-              </li>
+                </motion.li>
+              </Link>
             );
           })}
         </ul>
