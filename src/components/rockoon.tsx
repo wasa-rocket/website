@@ -7,7 +7,7 @@ export default function Rockoon() {
   return (
     <section>
       <div className="relative w-full h-screen z-0">
-        <div className="absolute z-50 mt-[560px] ml-6 md:ml-24 w-[75%]">
+        <div className="absolute z-50 top-[50%] ml-6 md:ml-24 w-[50%]">
           <HeroTitleImage src="/RockoonLogo.png" />
           <LearnMore />
         </div>

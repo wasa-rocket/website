@@ -11,7 +11,7 @@ export default function Cansat() {
   return (
     <section>
       <div className="relative w-full h-screen z-0">
-        <div className="absolute z-50 mt-[400px] md:ml-24 ml-6 w-[50%]">
+        <div className="absolute z-50 top-[50%] md:ml-24 ml-6 w-[50%]">
           {/* <HeroTitleH2 black={true} title="CANSAT" /> */}
           <HeroTitleImage src="/CansatLogo.png" />
           <LearnMore />
