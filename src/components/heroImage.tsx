@@ -9,8 +9,8 @@ export default function HeroImage({ src }: { src: string }) {
       <Image
         src={src}
         alt="Picture of the author"
-        layout="fill"
-        objectFit="cover"
+        fill
+        object-fit="cover"
         // className="transition-transform duration-500 ease-in-out hover:drop-shadow-md brightness-90"
       />
     </motion.div>

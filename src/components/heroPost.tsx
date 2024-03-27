@@ -13,8 +13,8 @@ export default function HeroPost() {
         <Image
           src="/Heroimage1.jpg"
           alt="Picture of the author"
-          layout="fill"
-          objectFit="cover"
+          fill
+          object-fit="cover"
         />
       </div>
     </section>
