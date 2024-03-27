@@ -1,20 +1,37 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function HeroPost() {
   return (
     <section>
       <div className="relative w-full h-screen flex flex-col justify-center z-0">
-        <h1 className="z-50 md:text-8xl text-5xl font-semibold text-center">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0,
+            opacity: { duration: 0.5 },
+            scale: { duration: 2 },
+            ease: "easeInOut",
+          }}
+          className="z-50 md:text-8xl text-5xl font-semibold text-center"
+        >
           WASA ROCKET
-        </h1>
-        <p className="z-50 text-center pt-4 text-lg">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1, ease: "easeInOut" }}
+          className="z-50 text-center pt-4 text-lg"
+        >
           We create exciting things for the world.
-        </p>
+        </motion.p>
         <Image
           src="/Heroimage1.jpg"
           alt="Hero Image"
           fill
-         className="object-cover"
+          className="object-cover"
         />
       </div>
     </section>

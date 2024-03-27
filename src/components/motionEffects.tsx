@@ -10,7 +10,7 @@ export function ShowFromDown({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1 },
       }}
       animate={isInView ? "visible" : "hidden"}

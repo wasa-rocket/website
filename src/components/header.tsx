@@ -34,6 +34,7 @@ export default function Header() {
   const [navHidden, setNavHidden] = useState(false);
   const { scrollY } = useScroll();
 
+  
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
     if (!previous) return;
@@ -80,19 +81,14 @@ export default function Header() {
           {menuElements &&
             menuElements.map((element) => {
               return (
-                <motion.li
-                  animate={{ x: 15 }}
-                  transition={{ duration: 0.5, delay: 1 }}
-                  className="z-50 my-auto"
-                  key={element.title}
-                >
+                <li className="z-50 my-auto" key={element.title}>
                   <Link
                     href={`/${element.link}`}
                     className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
                   >
                     {element.title}
                   </Link>
-                </motion.li>
+                </li>
               );
             })}
         </ul>
@@ -161,7 +157,7 @@ export default function Header() {
       <Alert>
         <span>
           WASAでは新入生を歓迎しています。
-          <Link href="/career" className="text-emerald-400  hover:underline">
+          <Link href="/career" className="underline  hover:text-gray-300">
             新歓情報を見る{`>`}
           </Link>
         </span>
