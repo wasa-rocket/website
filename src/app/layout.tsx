@@ -19,9 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header elements={["ROCKOON", "ROCKET", "CANSAT"]} />
+        <Header />
         {children}
-
       </body>
     </html>
   );

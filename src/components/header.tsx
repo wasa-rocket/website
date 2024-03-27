@@ -7,14 +7,25 @@ import { useEffect, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { MenuButton } from "./menuButton";
 
-export default function Header({ elements }: { elements: string[] }) {
-  const hamburgerMenuElement = [
+type Element = {
+    title: string;
+    link: string;
+};
+
+export default function Header() {
+    
+  const menuElements: Element[] = [
+    { title: "ROCKOON", link: "/rockoon" },
+    { title: "ROCKET", link: "/rocket" },
+    { title: "CANSAT", link: "/cansat" },
+  ];
+  const hamburgerMenuElement: Element[] = [
     { title: "About us", link: "/about" },
 
     { title: "Career", link: "/career" },
   ];
 
-  const hamburgerMenuElementHidden = [
+  const hamburgerMenuElementHidden: Element[] = [
     { title: "ROCKOON", link: "/ROCKOON" },
     { title: "ROCKET", link: "/ROCKET" },
     { title: "CANSAT", link: "/CANSAT" },
@@ -67,15 +78,15 @@ export default function Header({ elements }: { elements: string[] }) {
               />
             </Link>
           </li>
-          {elements &&
-            elements.map((element) => {
+          {menuElements &&
+            menuElements.map((element) => {
               return (
                 <li className="z-50 my-auto">
                   <Link
-                    href={`/${element}`}
+                    href={`/${element.link}`}
                     className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
                   >
-                    {element}
+                    {element.title}
                   </Link>
                 </li>
               );
