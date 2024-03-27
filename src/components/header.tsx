@@ -46,33 +46,34 @@ export default function Header() {
   });
 
   return (
-    <motion.section
-      variants={{
-        visible: { y: 0 },
-        hidden: { y: "-100%" },
-      }}
-      animate={navHidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed z-50 w-full"
-    >
-      <NavBar
-        menuElements={menuElements}
-        sideMenuHidden={sideMenuHidden}
-        setsideMenuHidden={setsideMenuHidden}
-      />
-      <SideBar
-        sideMenuElements={sideMenuElements}
-        sideMenuElementsHidden={sideMenuElementsHidden}
-        sideMenuHidden={sideMenuHidden}
-      />
-      <Alert>
-        <span>
-          WASAでは新入生を歓迎しています。
-          <Link href="/career" className="underline  hover:text-gray-300">
-            新歓情報を見る{`>`}
-          </Link>
-        </span>
-      </Alert>
-    </motion.section>
+      <motion.section
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100%" },
+        }}
+        animate={navHidden ? "hidden" : "visible"}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className="fixed z-50 w-full"
+      >
+        <NavBar
+          menuElements={menuElements}
+          navHidden={navHidden}
+          sideMenuHidden={sideMenuHidden}
+          setsideMenuHidden={setsideMenuHidden}
+        />
+        <SideBar
+          sideMenuElements={sideMenuElements}
+          sideMenuElementsHidden={sideMenuElementsHidden}
+          sideMenuHidden={sideMenuHidden}
+        />
+        <Alert navHidden={navHidden}>
+          <span>
+            WASAでは新入生を歓迎しています。
+            <Link href="/career" className="underline  hover:text-gray-300">
+              新歓情報を見る{`>`}
+            </Link>
+          </span>
+        </Alert>
+      </motion.section>
   );
 }
