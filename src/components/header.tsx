@@ -3,17 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import Alert from "./alert";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { MenuButton } from "./menuButton";
 
 type Element = {
-    title: string;
-    link: string;
+  title: string;
+  link: string;
 };
 
 export default function Header() {
-    
   const menuElements: Element[] = [
     { title: "ROCKOON", link: "/rockoon" },
     { title: "ROCKET", link: "/rocket" },
@@ -32,8 +31,8 @@ export default function Header() {
   ];
 
   const [hamburgerMenuHidden, setHamburgerMenuHidden] = useState(true);
-  const { scrollY } = useScroll();
   const [navHidden, setNavHidden] = useState(false);
+  const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -67,7 +66,7 @@ export default function Header() {
           />
         </Link>
         <ul className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12">
-          <li className="md:my-4 my-0">
+          <li className="md:my-4 my-0" key="image">
             <Link href="/">
               <Image
                 src="/logo/logoBold_25.png"
@@ -81,7 +80,7 @@ export default function Header() {
           {menuElements &&
             menuElements.map((element) => {
               return (
-                <li className="z-50 my-auto">
+                <li className="z-50 my-auto" key={element.title}>
                   <Link
                     href={`/${element.link}`}
                     className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
@@ -118,7 +117,10 @@ export default function Header() {
         <ul>
           {hamburgerMenuElementHidden.map((element) => {
             return (
-              <li className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 md:hidden block">
+              <li
+                className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 md:hidden block"
+                key={element.title}
+              >
                 <Link href={element.link} className=" ">
                   {element.title}
                 </Link>
@@ -127,7 +129,10 @@ export default function Header() {
           })}
           {hamburgerMenuElement.map((element) => {
             return (
-              <li className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400">
+              <li
+                className="p-2 mx-4 text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400"
+                key={element.title}
+              >
                 <Link href={element.link} className=" ">
                   {element.title}
                 </Link>

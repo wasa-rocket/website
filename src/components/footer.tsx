@@ -36,7 +36,7 @@ export default function Footer() {
       <ul className="flex flex-row justify-evenly sm:w-[50%] w-[80%] max-w-96 mx-auto my-6 mb-20">
         {socialMedias.map((socialMedia) => {
           return (
-            <li className="my-auto">
+            <li className="my-auto" key={socialMedia.alt}>
               <Link href={socialMedia.link}>
                 <Image
                   src={socialMedia.src}
