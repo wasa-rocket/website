@@ -1,5 +1,10 @@
-# website
-WASA Rocket's website.
+<p align="center">
+    <img src="public/logo/logoBold_25.png" height="128"/>
+    <h1 align="center">WASA Rocket Official Website</h1>
+    <p align="center">
+    Our official website
+    </p>
+</p>
 
 # Git Branch Strategy（ブランチ戦略）
 このレポジトリは，GitHub Flowをベースとしつつ、Git Flowの考え方も一部取り入れて運用しています。
