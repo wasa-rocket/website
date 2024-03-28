@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { HoverPop, ShowFromDown } from "./motionEffects";
+import { HoverPop, ShowFromDown } from "../motionEffects";
 
 export function HeroTitleImage({ src, link }: { src: string; link: string }) {
   const ref = useRef(null);

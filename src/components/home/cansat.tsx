@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { LearnMore } from "./button";
+import { LearnMore } from "../button";
 import { HeroTitleImage } from "./heroTitle";
 import Link from "next/link";
 import HeroImage from "./heroImage";
