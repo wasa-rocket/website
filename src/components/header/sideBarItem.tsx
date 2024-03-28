@@ -25,12 +25,9 @@ export default function SideBarItem({
         className={`p-2 mx-4 text-sm text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 hover:text-gray-300 ${
           hiddenWhenMd ? "md:hidden block" : ""
         }`}
-        key={element.title}
       >
         {element.title}
       </motion.li>
     </Link>
   );
 }
-
-//hello!

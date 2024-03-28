@@ -33,6 +33,7 @@ export default function SideBar({
               element={element}
               sideMenuHidden={sideMenuHidden}
               hiddenWhenMd={true}
+              key={element.title}
             />
           );
         })}
@@ -42,6 +43,7 @@ export default function SideBar({
               element={element}
               sideMenuHidden={sideMenuHidden}
               hiddenWhenMd={false}
+              key={element.title}
             />
           );
         })}
