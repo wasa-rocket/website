@@ -53,7 +53,7 @@ export default function Header() {
       }}
       animate={navHidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed z-50 w-full"
+      className="fixed top-0 m-0 z-50 w-full"
     >
       <NavBar
         menuElements={menuElements}
