@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LearnMore } from "../button";
 import { HeroTitleImage } from "./heroTitle";
 import HeroImage from "./heroImage";
@@ -11,7 +12,9 @@ export default function Rockoon() {
             src="/rockoon/RockoonTitleLogo2.png"
             link="/rockoon"
           />
-          <LearnMore className="ml-12"/>
+          <Link href="/rockoon">
+            <LearnMore className="md:ml-12" />
+          </Link>
         </div>
         <HeroImage src="/rockoon/RockoonHeroImage3.jpg" />
       </div>

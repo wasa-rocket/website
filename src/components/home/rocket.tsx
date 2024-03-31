@@ -11,7 +11,7 @@ export default function Rocket() {
           {/* <HeroTitleH2 title="ROCKET" /> */}
           <HeroTitleImage src="/rocket/RocketLogo.png" link="/rocket" />
           <Link href="/rocket">
-            <LearnMore className="ml-12"/>
+            <LearnMore className="md:ml-12"/>
           </Link>
         </div>
         <HeroImage src="/rocket/RocketHeroImage2.jpg" />
