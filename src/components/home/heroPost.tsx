@@ -27,11 +27,14 @@ export default function HeroPost() {
         >
           We create exciting things for the world.
         </motion.p>
-        <Image
-          src="/Heroimage1.jpg"
-          alt="Hero Image"
-          fill
-          className="object-cover"
+        {/*overlay*/}
+        <div className="absolute bg-black opacity-40 w-full h-full z-10"></div>
+        <video
+          src="/heropage/video.mp4"
+          autoPlay
+          loop
+          muted
+          className="object-cover z-0 absolute w-full h-full"
         />
       </div>
     </section>
