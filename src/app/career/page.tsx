@@ -3,6 +3,7 @@ import ElectronicsFeature from "@/components/carrer/ElectricsFeature";
 import Image from "next/image";
 import React from "react";
 import Links from "@/components/carrer/links";
+import Calendar from "@/components/carrer/calendar";
 
 function CareerPage() {
   return (
@@ -25,6 +26,7 @@ function CareerPage() {
       <StructureFeature />
       <ElectronicsFeature />
       <Links />
+      <Calendar />
     </main>
   );
 }
