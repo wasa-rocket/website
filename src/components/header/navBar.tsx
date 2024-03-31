@@ -19,14 +19,13 @@ export default function NavBar({
 }: Props) {
   return (
     <nav className="bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70">
-      <ul className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12">
-        <motion.li
-          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-          animate={navHidden ? "hidden" : "visible"}
-          transition={{ duration: 0.1, ease: "easeInOut" }}
-          className="md:my-4 my-0"
-          key="image"
-        >
+      <motion.ul
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+        animate={navHidden ? "hidden" : "visible"}
+        transition={{ duration: 0.1, ease: "easeInOut" }}
+        className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12"
+      >
+        <li className="md:my-4 my-0" key="image">
           <Link href="/">
             <Image
               src="/logo/logoBold_25.png"
@@ -36,26 +35,20 @@ export default function NavBar({
               className="md:block hidden"
             />
           </Link>
-        </motion.li>
+        </li>
         {menuElements.map((element) => {
           return (
-            <motion.li
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              animate={navHidden ? "hidden" : "visible"}
-              transition={{ duration: 0.1, ease: "easeInOut" }}
-              className="z-50 my-auto"
-              key={element.title}
-            >
+            <li className="z-50 my-auto" key={element.title}>
               <Link
-                href={`/${element.link}`}
+                href={element.link}
                 className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
               >
                 {element.title}
               </Link>
-            </motion.li>
+            </li>
           );
         })}
-      </ul>
+      </motion.ul>
       <motion.div
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
         animate={navHidden ? "hidden" : "visible"}
