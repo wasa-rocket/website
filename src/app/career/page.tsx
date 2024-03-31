@@ -2,6 +2,7 @@ import StructureFeature from "@/components/carrer/StructureFeature";
 import ElectronicsFeature from "@/components/carrer/ElectricsFeature";
 import Image from "next/image";
 import React from "react";
+import Links from "@/components/carrer/links";
 
 function CareerPage() {
   return (
@@ -23,6 +24,7 @@ function CareerPage() {
       </section>
       <StructureFeature />
       <ElectronicsFeature />
+      <Links />
     </main>
   );
 }
