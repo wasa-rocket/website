@@ -30,7 +30,7 @@ export default function HeroPost() {
         {/*overlay*/}
         <div className="absolute bg-black opacity-40 w-full h-full z-10"></div>
         <video
-          src="/heropage/video.mp4"
+          src="/heropage/HeroVideo.mp4"
           autoPlay
           loop
           muted
