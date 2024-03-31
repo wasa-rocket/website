@@ -13,18 +13,20 @@ export function HeroTitleImage({ src, link }: { src: string; link: string }) {
     <Link href={link}>
       <ShowFromDown isInView={isInView}>
         <HoverPop>
-          <Image
-            src={src}
-            ref={ref}
-            alt="Picture of the author"
-            width="700"
-            height="300"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-            className="mb-6"
-          />
+          <div className="flex flex-row">
+            <Image
+              src={src}
+              ref={ref}
+              alt="Picture of the author"
+              width="700"
+              height="300"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              className="mb-6"
+            />
+          </div>
         </HoverPop>
       </ShowFromDown>
     </Link>
