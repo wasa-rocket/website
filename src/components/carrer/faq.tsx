@@ -41,7 +41,7 @@ export default function Faq() {
   return (
     <section>
       <SectionTitle>FAQ</SectionTitle>
-      <Accordion type="single" collapsible className="w-[80%] mx-auto">
+      <Accordion type="single" collapsible className="w-[80%] max-w-[1000px] mx-auto">
         {faqContent.map((faq) => {
           return (
             <AccordionItem value={faq.question}>

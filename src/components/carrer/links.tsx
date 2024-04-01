@@ -42,7 +42,7 @@ export default function Links() {
   ];
 
   return (
-    <section className="">
+    <section className="w-[90%] max-w-[700px] mx-auto">
       <SectionTitle>CONTACT</SectionTitle>
       {linkContents.map((content, index) => (
         <LinkItem
