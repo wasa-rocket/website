@@ -1,9 +1,10 @@
-import StructureFeature from "@/components/carrer/StructureFeature";
-import ElectronicsFeature from "@/components/carrer/ElectricsFeature";
 import Image from "next/image";
 import React from "react";
 import Links from "@/components/carrer/links";
 import Calendar from "@/components/carrer/calendar";
+import Design from "@/components/carrer/Design";
+import Fabrication from "@/components/carrer/Fabrication";
+import Launch from "@/components/carrer/Launch";
 
 function CareerPage() {
   return (
@@ -20,11 +21,13 @@ function CareerPage() {
           <h1 className="text-white md:text-8xl font-bold text-5xl m-5">
             Find your future in WASA
           </h1>
-          <h2 className="text-white md:text-4xl text-2xl">新歓2024</h2>
+          <h2 className="text-white md:text-4xl text-2xl m-3">新歓2024</h2>
+          <p>WASAは、宇宙系のものづくりサークルです。</p>
         </div>
       </section>
-      <StructureFeature />
-      <ElectronicsFeature />
+      <Design />
+      <Fabrication />
+      <Launch />
       <Links />
       <Calendar />
     </main>
