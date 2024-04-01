@@ -8,7 +8,7 @@ function Launch() {
       style={{ boxShadow: "rgba(155, 155, 155, 0.8) 0 0 7px 3px" }}
     >
       <Image
-        src="/career/Design-1.jpg"
+        src="/career/Noto Summer.jpg"
         width="500"
         height="500"
         className="object-cover w-full h-full my-auto lg:max-w-[60%]"
