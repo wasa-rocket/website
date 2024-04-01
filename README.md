@@ -1,11 +1,10 @@
 <p align="center">
-    <img src="public/vercel.svg" height="128"/>
+    <img src="public/logo/logoBold_25.png" height="128"/>
     <h1 align="center">WASA Rocket Official Website</h1>
     <p align="center">
     Our official website
     </p>
 </p>
-
 
 # Git Branch Strategy（ブランチ戦略）
 このレポジトリは，GitHub Flowをベースとしつつ、Git Flowの考え方も一部取り入れて運用しています。
@@ -22,3 +21,10 @@
 ## 参考資料
 - [GitHub Flow with GitOpsの導入](https://techblog.zozo.com/entry/github-flow-with-gitops)
 - [git flowとgithub flow　開発運用方法の違い](https://qiita.com/Yu-kiFujiwara/items/40b503683d6525c8d274)
+
+
+
+
+# URL
+- Release Branch (Testing) -> https://website-git-release-wasa-rocket-projects.vercel.app
+- Old Website -> https://wasarocketpro.wixsite.com/home
