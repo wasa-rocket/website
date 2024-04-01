@@ -1,6 +1,9 @@
+import SectionTitle from "../sectionTitle";
+
 export default function Abstract() {
   return (
-    <section className="my-16 mx-auto sm:w-[80%] w-[90%] tracking-wider ">
+    <section className="my-16 mx-auto sm:w-[80%] w-[90%] max-w-[1000px] tracking-wider ">
+      <SectionTitle>ABOUT US</SectionTitle>
       <p className="my-6">
         WASAロケットProject(通称・ワサロケ)は、早稲田大学理工学術院・日本女子大学公認サークルであるWASAのプロジェクトの1つで、モデルロケットやCanSatを製作し、日本各地の大会に出場するという活動を行っています。
       </p>
