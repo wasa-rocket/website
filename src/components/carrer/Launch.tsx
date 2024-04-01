@@ -3,19 +3,22 @@ import React from "react";
 
 function Launch() {
   return (
-    <section className="relative w-full h-screen">
+    <section
+      className="w-[90%] flex lg:flex-row flex-col mx-auto justify-center my-24 items-center p-6"
+      style={{ boxShadow: "rgba(155, 155, 155, 0.8) 0 0 7px 3px" }}
+    >
       <Image
-        src="/career/StructureHeroImage.jpeg"
-        fill
-        alt="Career Hero Image"
-        className="absolute object-cover"
+        src="/career/Design-1.jpg"
+        width="500"
+        height="500"
+        className="object-cover w-full h-full my-auto lg:max-w-[60%]"
+        alt="Hand-drawn blueprints"
       />
-      <div className="absolute inset-0 bg-zinc-950 bg-opacity-70" />
-      <div className="absolute inset-0 flex flex-col items-start justify-end m-10">
-        <h1 className="text-white md:text-8xl font-bold text-5xl my-5">
+      <div className="flex flex-col items-start justify-center m-10 lg:w-1/2 w-full">
+        <h1 className="text-white lg:text-5xl font-bold text-3xl my-5">
           Launch
         </h1>
-        <p className="text-white md:text-2xl text-xl">
+        <p className="text-white md:text-xl text-xl">
           1年を通して様々なイベントや大会に出場しており、メンバーと共に各地に出向き、製作した機体を発表しています。OBOGや他大学、企業とも交流があり、人脈を広げることができます。
         </p>
         <div className=" mt-10">

@@ -17,10 +17,20 @@ function Design() {
   //     ["/career/Design-2.PNG", "Dimensional Drawing"],
   //   ];
   return (
-    <section className="w-full h-screen flex md:flex-row flex-col">
-      <div className="flex flex-col items-start justify-center m-10 md:w-1/2 md:h-screen h-1/2 w-full">
-        <h1 className="text-white md:text-8xl font-bold text-5xl my-5">設計</h1>
-        <p className="text-white md:text-2xl text-xl">
+    <section
+      className="w-[90%] flex lg:flex-row flex-col mx-auto justify-center my-24 items-center p-6"
+      style={{ boxShadow: "rgba(155, 155, 155, 0.8) 0 0 7px 3px" }}
+    >
+      <Image
+        src="/career/Design-1.jpg"
+        width="500"
+        height="500"
+        className="object-cover w-full h-full my-auto lg:max-w-[60%]"
+        alt="Hand-drawn blueprints"
+      />
+      <div className="flex flex-col items-start justify-center m-10 lg:w-1/2 w-full">
+        <h1 className="text-white lg:text-5xl font-bold text-3xl mb-5">設計</h1>
+        <p className="text-white md:text-xl text-xl">
           メンバーで集まり、プロジェクトを立ち上げて、ミッション(Success
           Criteria)を定めます。
           <br />
@@ -41,8 +51,7 @@ function Design() {
           </ul>
         </div>
       </div>
-      <div className="md:w-1/2 w-full md:h-screen h-1/2 relative">
-        {/* <Carousel
+      {/* <Carousel
           plugins={[
             Autoplay({
               delay: 2000,
@@ -64,13 +73,6 @@ function Design() {
             ))}
           </CarouselContent>
         </Carousel> */}
-        <Image
-          src="/career/Design-1.jpg"
-          fill
-          className="object-cover"
-          alt="Hand-drawn blueprints"
-        />
-      </div>
     </section>
   );
 }

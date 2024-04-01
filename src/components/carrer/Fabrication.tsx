@@ -3,17 +3,20 @@ import React from "react";
 
 function Fabrication() {
   return (
-    <section className="relative w-full h-screen">
+    <section
+      className="w-[90%] flex lg:flex-row flex-col mx-auto justify-center my-24 items-center p-6"
+      style={{ boxShadow: "rgba(155, 155, 155, 0.8) 0 0 7px 3px" }}
+    >
       <Image
-        src="/career/StructureHeroImage.jpeg"
-        fill
-        alt="Career Hero Image"
-        className="absolute object-cover"
+        src="/career/Rockoon Structure.jpg"
+        width="500"
+        height="500"
+        className="object-cover w-full h-full my-auto lg:max-w-[60%]"
+        alt="Hand-drawn blueprints"
       />
-      <div className="absolute inset-0 bg-zinc-950 bg-opacity-70" />
-      <div className="absolute inset-0 flex flex-col items-start justify-end m-10">
-        <h1 className="text-white md:text-8xl font-bold text-5xl my-5">製作</h1>
-        <p className="text-white md:text-2xl text-xl">
+      <div className="flex flex-col items-start justify-center m-10 lg:w-1/2 w-full">
+        <h1 className="text-white lg:text-5xl font-bold text-3xl my-5">製作</h1>
+        <p className="text-white md:text-xl text-xl">
           製作は主に構造部と電装部に分けられ、各メンバーの得意分野や興味のある分野に基づいて分担して作業を進めます。メンバーのレベルを問わず、チームで協力して作業を進めていきます。
         </p>
         <div className=" mt-10">
