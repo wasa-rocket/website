@@ -12,10 +12,10 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 function Design() {
-  const images = [
-    ["/career/Design-1.jpg", "Hand-drawn blueprints"],
-    ["/career/Design-2.PNG", "Dimensional Drawing"],
-  ];
+  //   const images = [
+  //     ["/career/Design-1.jpg", "Hand-drawn blueprints"],
+  //     ["/career/Design-2.PNG", "Dimensional Drawing"],
+  //   ];
   return (
     <section className="w-full h-screen flex md:flex-row flex-col">
       <div className="flex flex-col items-start justify-center m-10 md:w-1/2 md:h-screen h-1/2 w-full">
@@ -42,7 +42,7 @@ function Design() {
         </div>
       </div>
       <div className="md:w-1/2 w-full md:h-screen h-1/2 relative">
-        <Carousel
+        {/* <Carousel
           plugins={[
             Autoplay({
               delay: 2000,
@@ -63,7 +63,13 @@ function Design() {
               </CarouselItem>
             ))}
           </CarouselContent>
-        </Carousel>
+        </Carousel> */}
+        <Image
+          src="/career/Design-1.jpg"
+          fill
+          className="object-cover"
+          alt="Hand-drawn blueprints"
+        />
       </div>
     </section>
   );
