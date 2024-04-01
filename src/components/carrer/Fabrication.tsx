@@ -18,20 +18,24 @@ function Fabrication() {
         </p>
         <div className=" mt-10">
           <h2 className=" md:text-xl text-md m-3">What you can do ...</h2>
-          <ul className="text-md">
+          <ul className="text-md list-disc list-outside">
             <li>
-              - 構造部
-              <ul>
-                <li>- 3Dプリンターや各種ツールを用いた加工</li>
-                <li>- 早稲田大学ものづくり工房も活用</li>
+              構造部
+              <ul className="list-disc list-inside">
+                <li>3Dプリンターや各種ツールを用いた加工/工作</li>
+                <li>早稲田大学ものづくり工房も活用</li>
               </ul>
             </li>
 
             <li>
               - 電装部
               <ul>
-                <li>- 回路基板：Arduino, ESP32, RaspberryPi ...</li>
-                <li>- プログラミング：C++, Python, NextJS ...</li>
+                <li>- 半田付け・プリント基板(PCB)</li>
+                <li>- 機体の制御や無線通信、GUIの開発</li>
+                <li>- マイコン：Arduino, ESP32, RaspberryPi ...</li>
+                <li>
+                  - プログラミング：C++, Python, JavaScript(Vue, React) ...
+                </li>
               </ul>
             </li>
           </ul>
