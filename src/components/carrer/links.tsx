@@ -1,3 +1,4 @@
+import SectionTitle from "../sectionTitle";
 import LinkItem from "./linkItem";
 
 export default function Links() {
@@ -42,7 +43,7 @@ export default function Links() {
 
   return (
     <section className="">
-      <h2 className="sm:text-4xl text-3xl tracking-wider font-semibold ml-12 my-12">CONTACT</h2>
+      <SectionTitle>CONTACT</SectionTitle>
       {linkContents.map((content, index) => (
         <LinkItem
           key={index}

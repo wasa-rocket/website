@@ -6,6 +6,7 @@ import Design from "@/components/carrer/Design";
 import Fabrication from "@/components/carrer/Fabrication";
 import Launch from "@/components/carrer/Launch";
 import Abstract from "@/components/carrer/abstract";
+import Faq from "@/components/carrer/faq";
 
 function CareerPage() {
   return (
@@ -32,6 +33,7 @@ function CareerPage() {
       <Launch />
       <Links />
       <Calendar />
+      <Faq />
     </main>
   );
 }
