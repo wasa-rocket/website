@@ -31,14 +31,12 @@ function Fabrication() {
             </li>
 
             <li>
-              - 電装部
-              <ul>
-                <li>- 半田付け・プリント基板(PCB)</li>
-                <li>- 機体の制御や無線通信、GUIの開発</li>
-                <li>- マイコン：Arduino, ESP32, RaspberryPi ...</li>
-                <li>
-                  - プログラミング：C++, Python, JavaScript(Vue, React) ...
-                </li>
+              電装部
+              <ul className="list-disc list-inside">
+                <li>半田付け・プリント基板(PCB)</li>
+                <li>機体の制御や無線通信、GUIの開発</li>
+                <li>マイコン：Arduino, ESP32, RaspberryPi ...</li>
+                <li>プログラミング：C++, Python, JavaScript(Vue, React) ...</li>
               </ul>
             </li>
           </ul>
