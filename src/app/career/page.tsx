@@ -5,6 +5,7 @@ import Calendar from "@/components/carrer/calendar";
 import Design from "@/components/carrer/Design";
 import Fabrication from "@/components/carrer/Fabrication";
 import Launch from "@/components/carrer/Launch";
+import Abstract from "@/components/carrer/abstract";
 
 function CareerPage() {
   return (
@@ -25,6 +26,7 @@ function CareerPage() {
           <p>WASAは、宇宙系のものづくりサークルです。</p>
         </div>
       </section>
+      <Abstract />
       <Design />
       <Fabrication />
       <Launch />
