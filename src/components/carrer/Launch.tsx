@@ -22,12 +22,12 @@ function Launch() {
           <h2 className=" md:text-xl text-md m-3">
             Where you can go ... (昨年度の例)
           </h2>
-          <ul className="text-md">
-            <li>- 能代宇宙イベント @秋田県</li>
-            <li>- 二和ロケット交流会 @日本大学</li>
-            <li>- えひめ南予共同気球実験 @愛媛県</li>
-            <li>- ロケット交流会 @日本科学未来館</li>
-            <li>- 種子島ロケットコンテスト @鹿児島県</li>
+          <ul className="text-md list-disc">
+            <li>能代宇宙イベント @秋田県</li>
+            <li>二和ロケット交流会 @日本大学</li>
+            <li>えひめ南予共同気球実験 @愛媛県</li>
+            <li>ロケット交流会 @日本科学未来館</li>
+            <li>種子島ロケットコンテスト @鹿児島県</li>
           </ul>
         </div>
       </div>
