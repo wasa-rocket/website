@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Alert from "./alert";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import NavBar from "./navBar";
 import SideBar from "./sideBar";
@@ -45,6 +46,12 @@ export default function Header() {
     }
   });
 
+  //Set sidemenu hidden when loading new page
+  const pathname = usePathname();
+  useEffect(() => {
+    setsideMenuHidden(true);
+  }, [pathname]);
+
   return (
     <motion.section
       variants={{
@@ -66,14 +73,16 @@ export default function Header() {
         sideMenuElementsHidden={sideMenuElementsHidden}
         sideMenuHidden={sideMenuHidden}
       />
+        {pathname !== "/career" && (
       <Alert navHidden={navHidden}>
-        <span>
-          WASAでは新入生を歓迎しています。
-          <Link href="/career" className="underline  hover:text-gray-300">
-            新歓情報を見る{`>`}
-          </Link>
-        </span>
+          <span>
+            WASAでは新入生を歓迎しています。
+            <Link href="/career" className="underline  hover:text-gray-300">
+              新歓情報を見る{`>`}
+            </Link>
+          </span>
       </Alert>
+        )}
     </motion.section>
   );
 }
