@@ -7,6 +7,7 @@ import Fabrication from "@/components/carrer/Fabrication";
 import Launch from "@/components/carrer/Launch";
 import Abstract from "@/components/carrer/abstract";
 import Faq from "@/components/carrer/faq";
+import Workflow from "@/components/carrer/workflow";
 
 function CareerPage() {
   return (
@@ -28,6 +29,7 @@ function CareerPage() {
         </div>
       </section>
       <Abstract />
+      <Workflow />
       <Design />
       <Fabrication />
       <Launch />
