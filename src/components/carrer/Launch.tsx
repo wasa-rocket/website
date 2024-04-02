@@ -6,6 +6,7 @@ function Launch() {
     <section
       className="w-[90%] flex lg:flex-row flex-col mx-auto justify-center my-24 items-center p-6"
       style={{ boxShadow: "rgba(155, 155, 155, 0.8) 0 0 7px 3px" }}
+      id="launch"
     >
       <Image
         src="/career/Noto Summer.jpg"

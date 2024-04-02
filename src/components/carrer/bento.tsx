@@ -12,6 +12,7 @@ export default function Bento() {
             <br /> WASAでの経験を通じて設計を学びましょう
           </div>
         }
+        link="#design"
         src="/career/TireStructure.jpg"
         alt="design image"
       />
