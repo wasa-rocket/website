@@ -12,7 +12,7 @@ export default function LinkItem({ link, imgSrc, imgAlt, children }: Props) {
   return (
     <Link
       href={link}
-      className="flex sm:flex-row flex-col  w-full bg-black my-12 p-8"
+      className="flex sm:flex-row flex-col  w-full my-12 p-8"
       style={{ boxShadow: "rgba(155, 155, 155, 0.8) 0 0 7px 3px" }}
     >
       <Image
@@ -20,7 +20,7 @@ export default function LinkItem({ link, imgSrc, imgAlt, children }: Props) {
         alt={imgAlt}
         width="30"
         height="30"
-        className="invert sm:mr-8 sm:my-0 mb-4"
+        className="sm:mr-8 sm:my-0 mb-4"
       />
       {children}
     </Link>
