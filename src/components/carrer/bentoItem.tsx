@@ -7,59 +7,46 @@ type Props = {
   description?: React.ReactNode;
   src: string;
   alt: string;
-  aspect?: string;
-  link?: string;
+  className?: string;
 };
 
-export function BentoItemDesign({
+export function BentoItemLg({
   title,
   description,
   src,
   alt,
-  link,
-  aspect = "7/5",
+  className = "",
 }: Props) {
   return (
-    <div className="md:col-span-2 col-span-3 relative w-full md:aspect-[7/5] sm:aspect-[9/5] aspect-[4/5] text-white">
+    <div className={"relative w-full  text-white drop-shadow-lg " + className}>
       <BoxText title={title} description={description} />
       <div className="absolute inset-0 bg-neutral-900 bg-opacity-50 z-10" />
-      <Image src={src} alt={alt} fill className="object-cover absolute" />
-    </div>
-  );
-}
-
-export function BentoItemFabrication({ title, description, src, alt }: Props) {
-  return (
-    <div className="col-span-3 relative w-full md:aspect-[5/4] sm:aspect-[7/4] aspect-[4/5] text-white">
-      <BoxText title={title} description={description} />
-      <div className="absolute inset-0 bg-neutral-900 bg-opacity-50 z-10" />
-      <Image src={src} alt={alt} fill className="object-cover absolute" />
-    </div>
-  );
-}
-
-export function BentoItemLaunch({
-  title,
-  description,
-  src,
-  alt,
-  link,
-  aspect = "7/5",
-}: Props) {
-  return (
-    <div className="col-span-3 relative w-full md:aspect-[3/1] sm:aspect-[2/1] aspect-[4/5] text-white">
-      <BoxText title={title} description={description} />
-      <div className="absolute inset-0 bg-neutral-900 bg-opacity-50 z-10" />
-      <Image src={src} alt={alt} fill className="object-cover absolute" />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 1024px) 635px, (max-width: 768px) 465px, (max-width: 640px) 576px, 100vw"
+        className="object-cover absolute"
+      />
     </div>
   );
 }
 
 export function BentoItemSm({ title, src, alt }: Props) {
   return (
-    <div className="col-span-1 relative w-full h-full md:aspect-auto sm:aspect-[5/3] aspect-[4/5] bg-neutral-100 px-2 pt-2 flex flex-col justify-center sm:text-base text-xs">
+    <div
+      className="col-span-1 relative w-full h-full md:aspect-auto sm:aspect-[5/3] aspect-[4/5] px-2 pt-2 flex flex-col justify-center sm:text-base text-xs drop-shadow-lg
+    bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100
+    "
+    >
       <div className="h-1/2 relative my-auto flex items-center">
-        <Image src={src} alt={alt} layout="fill" className="object-contain" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100px, (max-width: 768px) 70px, (max-width: 640px) 100px, 100px"
+          className="object-contain"
+        />
       </div>
       <div className="text-center my-auto">{title}</div>
     </div>

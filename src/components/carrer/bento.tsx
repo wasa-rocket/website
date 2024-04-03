@@ -1,8 +1,6 @@
 import Image from "next/image";
 import {
-  BentoItemDesign,
-  BentoItemFabrication,
-  BentoItemLaunch,
+  BentoItemLg,
   BentoItemSm,
 } from "./bentoItem";
 import { BentoContainer, BentoContainerSub } from "./bentoContainer";
@@ -11,7 +9,7 @@ export default function Bento() {
   return (
     <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm min-w-[300px]">
       <BentoContainer>
-        <BentoItemDesign
+        <BentoItemLg
           title="設計"
           description={
             <>
@@ -19,7 +17,7 @@ export default function Bento() {
               <br /> WASAでの経験を通じて設計を学びましょう
             </>
           }
-          link="#design"
+          className="md:aspect-[7/5] sm:aspect-[9/5] aspect-[4/5] md:col-span-2 col-span-3 "
           src="/career/TireStructure.jpg"
           alt="design image"
         />
@@ -39,7 +37,7 @@ export default function Bento() {
       {/* <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm grid md:grid-cols-3 grid-cols-2 gap-4 relative my-12"></div> */}
 
       <div className="grid md:grid-cols-5 grid-cols-2 gap-4 relative my-12">
-        <BentoItemFabrication
+        <BentoItemLg
           title="制作"
           description={
             <>
@@ -50,6 +48,7 @@ export default function Bento() {
           }
           src="/career/modelRocket.png"
           alt="model rocket image"
+          className="md:aspect-[5/4] sm:aspect-[7/4] aspect-[4/5] col-span-3"
         />
         <div className="flex md:flex-col flex-row gap-4 w-full md:col-span-2 col-span-3">
           <BentoItemSm
@@ -65,13 +64,14 @@ export default function Bento() {
         </div>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-2 gap-4 relative ">
-        <BentoItemLaunch
+        <BentoItemLg
           title="打ち上げ"
           description={
             <>WASAでは毎年様々な大会に出場して制作物を発表しています！</>
           }
           src="/career/Noto Summer.jpg"
           alt="launch image"
+          className="col-span-3  md:aspect-[3/1] sm:aspect-[2/1] aspect-[4/5]"
         />
       </div>
     </div>

@@ -10,8 +10,9 @@ export default function BoxText({ title, description }: Props) {
         {title}
       </h3>
       <p className="sm:text-base text-sm max-w-xs mb-3">{description}</p>
-      <button className="bg-blue-600 rounded-full px-4 py-2 text-xs">もっと詳しく</button>
-
+      <button className="bg-black rounded-full px-4 py-2 text-xs">
+        もっと詳しく
+      </button>
     </div>
   );
 }
