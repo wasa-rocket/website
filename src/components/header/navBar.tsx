@@ -47,7 +47,7 @@ export default function NavBar({
               key={element.title}
             >
               <Link
-                href={`/${element.link}`}
+                href={element.link}
                 className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
               >
                 {element.title}

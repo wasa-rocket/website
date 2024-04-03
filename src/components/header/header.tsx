@@ -26,9 +26,9 @@ export default function Header() {
   ];
 
   const sideMenuElementsHidden: Element[] = [
-    { title: "ROCKOON", link: "/ROCKOON" },
-    { title: "ROCKET", link: "/ROCKET" },
-    { title: "CANSAT", link: "/CANSAT" },
+    { title: "ROCKOON", link: "/rockoon" },
+    { title: "ROCKET", link: "/rocket" },
+    { title: "CANSAT", link: "/cansat" },
   ];
 
   const [sideMenuHidden, setsideMenuHidden] = useState(true);
