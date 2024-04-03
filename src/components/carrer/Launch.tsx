@@ -15,10 +15,10 @@ function Launch() {
         alt="Hand-drawn blueprints"
       />
       <div className="flex flex-col items-start justify-center m-10 lg:w-1/2 w-full">
-        <h1 className="text-white lg:text-5xl font-bold text-3xl my-5">
+        <h1 className="lg:text-5xl font-bold text-3xl my-5">
           Launch
         </h1>
-        <p className="text-white md:text-xl text-xl">
+        <p className=" md:text-xl text-xl">
           1年を通して様々なイベントや大会に出場しており、メンバーと共に各地に出向き、製作した機体を発表しています。OBOGや他大学、企業とも交流があり、人脈を広げることができます。
         </p>
         <div className=" mt-10">

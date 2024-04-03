@@ -15,8 +15,8 @@ function Fabrication() {
         alt="Hand-drawn blueprints"
       />
       <div className="flex flex-col items-start justify-center m-10 lg:w-1/2 w-full">
-        <h1 className="text-white lg:text-5xl font-bold text-3xl my-5">製作</h1>
-        <p className="text-white md:text-xl text-xl">
+        <h1 className="lg:text-5xl font-bold text-3xl my-5">製作</h1>
+        <p className="md:text-xl text-xl">
           製作は主に構造部と電装部に分けられ、各メンバーの得意分野や興味のある分野に基づいて分担して作業を進めます。メンバーのレベルを問わず、チームで協力して作業を進めていきます。
         </p>
         <div className=" mt-10">

@@ -29,8 +29,8 @@ function Design() {
         alt="Hand-drawn blueprints"
       />
       <div className="flex flex-col items-start justify-center m-10 lg:w-1/2 w-full">
-        <h1 className="text-white lg:text-5xl font-bold text-3xl mb-5">設計</h1>
-        <p className="text-white md:text-xl text-xl">
+        <h1 className="lg:text-5xl font-bold text-3xl mb-5">設計</h1>
+        <p className="md:text-xl text-xl">
           メンバーで集まり、プロジェクトを立ち上げて、ミッション(Success
           Criteria)を定めます。
           <br />
