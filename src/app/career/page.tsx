@@ -10,7 +10,7 @@ import Faq from "@/components/carrer/faq";
 
 function CareerPage() {
   return (
-    <main className="mt-24">
+    <main className="mt-24 light">
       <section className="relative w-full h-screen">
         <Image
           src="/career/CareerHeroImage.jpeg"
