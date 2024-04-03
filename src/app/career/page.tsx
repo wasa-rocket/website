@@ -11,7 +11,7 @@ import Workflow from "@/components/carrer/workflow";
 
 function CareerPage() {
   return (
-    <main className="mt-24">
+    <main className="pb-32 light">
       <section className="relative w-full h-screen">
         <Image
           src="/career/CareerHeroImage.jpeg"
