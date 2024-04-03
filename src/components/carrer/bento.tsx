@@ -5,11 +5,12 @@ import {
   BentoItemLaunch,
   BentoItemSm,
 } from "./bentoItem";
+import { BentoContainer, BentoContainerSub } from "./bentoContainer";
 
 export default function Bento() {
   return (
-    <>
-      <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm grid md:grid-cols-3 grid-cols-2 gap-4 relative my-12">
+    <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm min-w-[300px]">
+      <BentoContainer>
         <BentoItemDesign
           title="設計"
           description={
@@ -22,7 +23,7 @@ export default function Bento() {
           src="/career/TireStructure.jpg"
           alt="design image"
         />
-        <div className="flex flex-col gap-4">
+        <div className="flex md:flex-col flex-row w-full gap-4 md:col-span-1 col-span-3">
           <BentoItemSm
             title="Project Management"
             src="/career/bento/project-management.png"
@@ -34,22 +35,10 @@ export default function Bento() {
             alt="cad image"
           />
         </div>
-      </div>
+      </BentoContainer>
+      {/* <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm grid md:grid-cols-3 grid-cols-2 gap-4 relative my-12"></div> */}
 
-      <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm grid md:grid-cols-3 grid-cols-2 gap-4 relative my-12">
-        <div className="flex flex-col gap-4">
-          <BentoItemSm
-            title="Circuits/Programming"
-            src="/career/bento/circuit.png"
-            alt="circuit image"
-          />
-          <BentoItemSm
-            title="3D Printing"
-            src="/career/bento/3d-printing.png"
-            alt="3d-printing image"
-          />
-        </div>
-
+      <div className="grid md:grid-cols-5 grid-cols-2 gap-4 relative my-12">
         <BentoItemFabrication
           title="制作"
           description={
@@ -62,22 +51,11 @@ export default function Bento() {
           src="/career/modelRocket.png"
           alt="model rocket image"
         />
-      </div>
-      <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm grid md:grid-cols-3 grid-cols-2 gap-4 relative ">
-        <BentoItemLaunch
-          title="打ち上げ"
-          description={
-            <div>WASAでは毎年様々な大会に出場して制作物を発表しています！</div>
-          }
-          src="/career/Noto Summer.jpg"
-          alt="launch image"
-          aspect="3/3"
-        />
-        <div className="flex flex-col gap-4">
+        <div className="flex md:flex-col flex-row gap-4 w-full md:col-span-2 col-span-3">
           <BentoItemSm
-            title="3D Printing"
-            src="/career/bento/3d-printing.png"
-            alt="3d-printing image"
+            title="Circuits/Programming"
+            src="/career/bento/circuit.png"
+            alt="circuit image"
           />
           <BentoItemSm
             title="3D Printing"
@@ -86,6 +64,16 @@ export default function Bento() {
           />
         </div>
       </div>
-    </>
+      <div className="grid md:grid-cols-3 grid-cols-2 gap-4 relative ">
+        <BentoItemLaunch
+          title="打ち上げ"
+          description={
+            <div>WASAでは毎年様々な大会に出場して制作物を発表しています！</div>
+          }
+          src="/career/Noto Summer.jpg"
+          alt="launch image"
+        />
+      </div>
+    </div>
   );
 }

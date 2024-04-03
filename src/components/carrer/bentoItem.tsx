@@ -19,7 +19,7 @@ export function BentoItemDesign({
   aspect = "7/5",
 }: Props) {
   return (
-    <div className="col-span-2 relative w-full md:aspect-[7/5] text-white">
+    <div className="md:col-span-2 col-span-3 relative w-full md:aspect-[7/5] sm:aspect-[9/5] aspect-[4/5] text-white">
       <div className="absolute mx-4 z-50 inset-0 flex flex-col justify-center text-center">
         <div className="lg:text-5xl md:text-3xl sm:text-5xl text-2xl font-semibold lg:mb-6 mb-0">
           {title}
@@ -32,16 +32,9 @@ export function BentoItemDesign({
   );
 }
 
-export function BentoItemFabrication({
-  title,
-  description,
-  src,
-  alt,
-  link,
-  aspect = "7/5",
-}: Props) {
+export function BentoItemFabrication({ title, description, src, alt }: Props) {
   return (
-    <div className="col-span-2 relative w-full md:aspect-[6/5] text-white">
+    <div className="col-span-3 relative w-full md:aspect-[5/4] sm:aspect-[7/4] aspect-[4/5] text-white">
       <div className="absolute mx-4 z-50 inset-0 flex flex-col justify-center text-center">
         <div className="lg:text-5xl md:text-3xl sm:text-5xl text-2xl font-semibold lg:mb-6 mb-0">
           {title}
@@ -63,7 +56,7 @@ export function BentoItemLaunch({
   aspect = "7/5",
 }: Props) {
   return (
-    <div className="col-span-2 relative w-full md:aspect-[7/5] text-white">
+    <div className="col-span-3 relative w-full md:aspect-[3/1] sm:aspect-[2/1] aspect-[4/5] text-white">
       <div className="absolute mx-4 z-50 inset-0 flex flex-col justify-center text-center">
         <div className="lg:text-5xl md:text-3xl sm:text-5xl text-2xl font-semibold lg:mb-6 mb-0">
           {title}
@@ -78,7 +71,7 @@ export function BentoItemLaunch({
 
 export function BentoItemSm({ title, src, alt }: Props) {
   return (
-    <div className="col-span-1 relative w-full h-full bg-neutral-100 px-2 pt-2 flex flex-col justify-center sm:text-base text-xs">
+    <div className="col-span-1 relative w-full h-full md:aspect-auto sm:aspect-[5/3] aspect-[4/5] bg-neutral-100 px-2 pt-2 flex flex-col justify-center sm:text-base text-xs">
       <div className="h-1/2 relative my-auto flex items-center">
         <Image src={src} alt={alt} layout="fill" className="object-contain" />
       </div>
