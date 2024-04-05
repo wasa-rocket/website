@@ -18,7 +18,7 @@ export default function NavBar({
   setsideMenuHidden,
 }: Props) {
   return (
-    <nav className="bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70">
+    <nav className="bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 md:h-auto h-16">
       <ul className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12">
         <motion.li
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
@@ -61,13 +61,13 @@ export default function NavBar({
         animate={navHidden ? "hidden" : "visible"}
         transition={{ duration: 0.1, ease: "easeInOut" }}
       >
-        <Link href="/" className="md:hidden block mb-[-25px] mt-[-17px] w-full">
+        <Link href="/" className="md:hidden block ">
           <Image
             src="/logo/logoBoldWide_25.png"
             alt="logo"
             width={180}
             height={100}
-            className="mx-auto"
+            className="mx-auto "
           />
         </Link>
       </motion.div>
@@ -75,7 +75,7 @@ export default function NavBar({
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
         animate={navHidden ? "hidden" : "visible"}
         transition={{ duration: 0.1, ease: "easeInOut" }}
-        className="z-50 absolute right-8 top-[36%] md:top-1/2 transform -translate-y-1/2"
+        className="z-50 absolute right-8 top-1/2 md:top-1/2 transform -translate-y-1/2"
         onClick={() => {
           setsideMenuHidden((sideMenuHidden) => !sideMenuHidden);
         }}
