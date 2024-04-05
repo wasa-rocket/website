@@ -10,7 +10,7 @@ export default function BoxText({ title, description }: Props) {
         {title}
       </h3>
       <p className="sm:text-base text-sm max-w-xs mb-3">{description}</p>
-      <button className="bg-black rounded-full px-4 py-2 text-xs">
+      <button className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br rounded-full px-4 py-2 text-xs">
         もっと詳しく
       </button>
     </div>

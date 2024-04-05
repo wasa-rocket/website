@@ -53,7 +53,7 @@ export default function Bento() {
             }
           />
         </BentoItemLg>
-        <div className="flex md:flex-col flex-row gap-4 w-full md:col-span-2 col-span-3">
+        <div className="flex md:flex-col flex-row w-full gap-4 md:col-span-2 col-span-3">
           <BentoItemSm src="/career/bento/circuit.png" alt="circuit image">
             Circuits/Programming
           </BentoItemSm>
