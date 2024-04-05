@@ -32,6 +32,7 @@ export default function Bento() {
       <Modal visible={launchVisible} setVisible={setLaunchVisible}>
         <Launch />
       </Modal>
+      
       <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm min-w-[300px]">
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 relative my-12">
           <BentoItemLg

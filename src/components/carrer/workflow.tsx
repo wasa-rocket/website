@@ -3,7 +3,7 @@ import Bento from "./bento";
 
 export default function Workflow() {
   return (
-    <section>
+    <section className="my-44">
       <SectionTitle>WORKFLOW</SectionTitle>
       <Bento />
     </section>

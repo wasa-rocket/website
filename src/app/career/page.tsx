@@ -30,9 +30,6 @@ function CareerPage() {
       </section>
       <Abstract />
       <Workflow />
-      <Design />
-      <Fabrication />
-      <Launch />
       <Links />
       <Calendar />
       <Faq />
