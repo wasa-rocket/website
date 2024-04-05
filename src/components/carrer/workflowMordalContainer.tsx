@@ -8,12 +8,12 @@ import React from "react";
 interface Props {
   title: string;
   description: React.ReactNode;
-  listItems: string[];
+  listItems: { title?: string; items: string[] }[];
   imageSrc: string;
   imageAlt: string;
 }
 
-export default function WorkflowContainer({
+export default function WorkflowMordalContainer({
   title,
   description,
   listItems,
@@ -41,12 +41,19 @@ export default function WorkflowContainer({
         <p className="lg:text-base md:text-base text-gray-500 font-semibold ">
           {description}
         </p>
-        <div className="mt-4">
-          <ul className="text-md list-disc ml-5 font-semibold text-gray-600">
-            {listItems.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+        <div className="mt-4 text-base font-semibold text-gray-600">
+          {listItems.map((section, index) => (
+            <div key={section.title}>
+              {section.title && (
+                <h4 className="tracking-wider">{section.title}</h4>
+              )}
+              <ul className="list-disc ml-5">
+                {section.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

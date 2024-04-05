@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import WorkflowContainer from "./workflowContainer";
+import WorkflowMordalContainer from "./workflowMordalContainer";
 
 function Design() {
   return (
@@ -41,7 +41,7 @@ function Design() {
     //   </div>
 
     // </section>
-    <WorkflowContainer
+    <WorkflowMordalContainer
       title="設計"
       description={
         <>
@@ -52,11 +52,15 @@ function Design() {
         </>
       }
       listItems={[
-        "プロジェクトマネジメント",
-        "適切なリスク管理",
-        "コンピューターのCADアプリケーションを用いた機体や回路基板PCBの設計（Fusion360, KiCad ...）",
-        "シミュレーションや解析",
-        "プロトタイプの製作",
+        {
+          items: [
+            "プロジェクトマネジメント",
+            "適切なリスク管理",
+            "コンピューターのCADアプリケーションを用いた機体や回路基板PCBの設計（Fusion360, KiCad ...）",
+            "シミュレーションや解析",
+            "プロトタイプの製作",
+          ],
+        },
       ]}
       imageSrc="/career/TireStructure.jpg"
       imageAlt="Hand-drawn blueprints"

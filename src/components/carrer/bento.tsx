@@ -6,6 +6,8 @@ import { Box } from "lucide-react";
 import Modal from "../modal";
 import { useState } from "react";
 import Design from "./Design";
+import Fabrication from "./Fabrication";
+import Launch from "./Launch";
 
 export default function Bento() {
   const [designVisible, setDesignVisible] = useState(false);
@@ -25,10 +27,10 @@ export default function Bento() {
         <Design />
       </Modal>
       <Modal visible={fabricationVisible} setVisible={setFabricationVisible}>
-        Fabrication!
+        <Fabrication />
       </Modal>
       <Modal visible={launchVisible} setVisible={setLaunchVisible}>
-        Launch!
+        <Launch />
       </Modal>
       <div className="container lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm min-w-[300px]">
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 relative my-12">
