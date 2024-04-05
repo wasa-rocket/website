@@ -3,23 +3,16 @@ import Link from "next/link";
 import BoxText from "./boxText";
 
 type Props = {
-  title: string;
-  description?: React.ReactNode;
   src: string;
   alt: string;
   className?: string;
+  children?: React.ReactNode;
 };
 
-export function BentoItemLg({
-  title,
-  description,
-  src,
-  alt,
-  className = "",
-}: Props) {
+export function BentoItemLg({ src, alt, className = "", children }: Props) {
   return (
     <div className={"relative w-full  text-white drop-shadow-lg " + className}>
-      <BoxText title={title} description={description} />
+      {children}
       <div className="absolute inset-0 bg-neutral-900 bg-opacity-50 z-10" />
       <Image
         src={src}
@@ -32,7 +25,7 @@ export function BentoItemLg({
   );
 }
 
-export function BentoItemSm({ title, src, alt }: Props) {
+export function BentoItemSm({ src, alt, children }: Props) {
   return (
     <div
       className="col-span-1 relative w-full h-full md:aspect-auto sm:aspect-[5/3] aspect-[4/5] px-2 pt-2 flex flex-col justify-center sm:text-base text-xs drop-shadow-lg
@@ -48,7 +41,7 @@ export function BentoItemSm({ title, src, alt }: Props) {
           className="object-contain"
         />
       </div>
-      <div className="text-center my-auto">{title}</div>
+      <div className="text-center my-auto">{children}</div>
     </div>
   );
 }
