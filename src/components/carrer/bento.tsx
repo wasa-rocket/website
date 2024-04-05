@@ -5,6 +5,7 @@ import BoxText from "./boxText";
 import { Box } from "lucide-react";
 import Modal from "../modal";
 import { useState } from "react";
+import Design from "./Design";
 
 export default function Bento() {
   const [designVisible, setDesignVisible] = useState(false);
@@ -21,7 +22,7 @@ export default function Bento() {
   return (
     <>
       <Modal visible={designVisible} setVisible={setDesignVisible}>
-        Deisgn!
+        <Design />
       </Modal>
       <Modal visible={fabricationVisible} setVisible={setFabricationVisible}>
         Fabrication!
