@@ -16,16 +16,20 @@ export default function Abstract() {
   ];
   return (
     <section className="sm:mb-44 mb-28 mx-auto w-[80%] max-w-[1000px] tracking-wider ">
-      <SectionTitle>ABOUT US</SectionTitle>
+      {/* <SectionTitle>ABOUT US</SectionTitle>
       <p className="text-center mt-[-36px] mb-12 font-semibold text-gray-600">
         ワサロケとは？
-      </p>
-      {/* <div className="sm:my-16 my-10">
+      </p> */}
+      <div className="sm:my-16 my-10">
         <h2 className="font-semibold text-gray-700 mb-6">ABOUT US</h2>
-        <p className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold text-gray-800 tracking-tight">
-          WASAロケとは？
+        <p className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl mb-4 font-bold text-gray-800 tracking-tight lg:leading-tight md:leading-tight sm:leading-tight leading-tight">
+          はじめまして。
+          <br />
+          楽しすぎるサークル、
+          <br />
+          WASAロケです。
         </p>
-      </div> */}
+      </div>
       <SlideShow imageList={imageList} />
       <p className="my-6">
         WASAロケットProject(通称・ワサロケ)は、早稲田大学理工学術院・日本女子大学公認サークルであるWASAのプロジェクトの1つで、モデルロケットやCanSatを製作し、日本各地の大会に出場するという活動を行っています。
