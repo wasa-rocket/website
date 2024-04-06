@@ -10,7 +10,7 @@ export function HeroTitleImage({ src, link }: { src: string; link: string }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <Link href={link}>
+    <Link href={link} aria-label="Lean more about the projects in WASA">
       <ShowFromDown isInView={isInView}>
         <HoverPop>
           <div className="flex flex-row">

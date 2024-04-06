@@ -77,7 +77,7 @@ export default function Header() {
       <Alert navHidden={navHidden}>
           <span>
             WASAでは新入生を歓迎しています。
-            <Link href="/career" className="underline  hover:text-gray-300">
+            <Link href="/career" className="underline  hover:text-gray-300" aria-label="Read more about career">
               新歓情報を見る{`>`}
             </Link>
           </span>
