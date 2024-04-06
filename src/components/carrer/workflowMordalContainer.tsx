@@ -28,8 +28,7 @@ export default function WorkflowMordalContainer({
       <div className="relative sm:w-[40%] h-full min-h-[200px]">
         <Image
           src={imageSrc}
-          layout="fill"
-          objectFit="cover"
+          fill
           className="absolute object-cover my-auto w-[40%]"
           alt={imageAlt}
         />
