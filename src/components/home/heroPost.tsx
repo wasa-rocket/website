@@ -35,6 +35,7 @@ export default function HeroPost() {
           loop
           muted
           className="object-cover z-0 absolute w-full h-full"
+          playsInline
         />
       </div>
     </section>
