@@ -76,6 +76,7 @@ export default function NavBar({
         animate={navHidden ? "hidden" : "visible"}
         transition={{ duration: 0.1, ease: "easeInOut" }}
         className="z-50 absolute right-8 top-[36%] md:top-1/2 transform -translate-y-1/2"
+        aria-label="hamburger menu button"
         onClick={() => {
           setsideMenuHidden((sideMenuHidden) => !sideMenuHidden);
         }}
