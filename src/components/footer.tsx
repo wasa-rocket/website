@@ -51,7 +51,7 @@ export default function Footer() {
         })}
       </ul>
       <p className="text-center mx-auto">
-        See image credits <Link href="/credits" className="underline">here</Link>
+        Look for <Link href="/credits" className="underline">Image Credits</Link>
       </p>
     </footer>
   );
