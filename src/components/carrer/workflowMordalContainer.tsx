@@ -43,13 +43,13 @@ export default function WorkflowMordalContainer({
         </p>
         <div className="mt-4 text-base font-semibold text-gray-600">
           {listItems.map((section, index) => (
-            <div key={section.title}>
+            <div key={section.items[0] + index}>
               {section.title && (
                 <h4 className="tracking-wider">{section.title}</h4>
               )}
               <ul className="list-disc ml-5">
                 {section.items.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={item + index}>{item}</li>
                 ))}
               </ul>
             </div>
