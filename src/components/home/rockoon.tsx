@@ -12,9 +12,7 @@ export default function Rockoon() {
             src="/rockoon/RockoonTitleLogo2.png"
             link="/rockoon"
           />
-          <Link href="/rockoon">
-            <LearnMore className="md:ml-12" />
-          </Link>
+          <LearnMore className="md:ml-12" link="/rockoon" />
         </div>
         <HeroImage src="/rockoon/RockoonHeroImage3.jpg" />
       </div>
