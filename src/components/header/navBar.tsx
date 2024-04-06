@@ -27,7 +27,7 @@ export default function NavBar({
           className="md:my-4 my-0"
           key="image"
         >
-          <Link href="/">
+          <Link href="/" aria-label="Go to home page">
             <Image
               src="/logo/logoBold_25.png"
               alt="logo"
@@ -49,6 +49,7 @@ export default function NavBar({
               <Link
                 href={element.link}
                 className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
+                aria-label={`go to ${element.title} page`}
               >
                 {element.title}
               </Link>
@@ -76,10 +77,10 @@ export default function NavBar({
         animate={navHidden ? "hidden" : "visible"}
         transition={{ duration: 0.1, ease: "easeInOut" }}
         className="z-50 absolute right-8 top-[36%] md:top-1/2 transform -translate-y-1/2"
-        aria-label="hamburger menu button"
         onClick={() => {
           setsideMenuHidden((sideMenuHidden) => !sideMenuHidden);
         }}
+        aria-label="Open hamburger menu"
       >
         <MenuButton isOpen={!sideMenuHidden} color="white" strokeWidth={2} />
       </motion.button>
