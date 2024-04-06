@@ -68,7 +68,7 @@ export default function NavBar({
             alt="logo"
             width={180}
             height={100}
-            className="mx-auto "
+            className="mx-auto mt-[-18px]"
           />
         </Link>
       </motion.div>
