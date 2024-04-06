@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { Element } from "./header";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
   element: Element;
@@ -13,21 +14,28 @@ export default function SideBarItem({
   sideMenuHidden,
   hiddenWhenMd,
 }: Props) {
+  const router = useRouter();
   return (
-    <Link href={element.link}>
-      <motion.li
-        variants={{
-          visible: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-        animate={sideMenuHidden ? "hidden" : "visible"}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className={`p-2 mx-4 text-sm text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 hover:text-gray-300 ${
-          hiddenWhenMd ? "md:hidden block" : ""
+    <motion.li
+      variants={{
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      animate={sideMenuHidden ? "hidden" : "visible"}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      onClick={() => router.push(element.link)}
+      className="w-full"
+    >
+      <Link
+        href={element.link}
+        aria-label={"link to " + element.title + "page"}
+        className={`w-[90%] mx-auto p-2 text-sm text-white font-semibold text-right tracking-wider border-b-[1px] border-gray-400 hover:text-gray-300 block ${
+          hiddenWhenMd ? "md:hidden" : ""
         }`}
       >
+        
         {element.title}
-      </motion.li>
-    </Link>
+      </Link>
+    </motion.li>
   );
 }

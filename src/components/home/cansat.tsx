@@ -11,9 +11,7 @@ export default function Cansat() {
       <div className="relative w-full h-screen z-0">
         <div className="absolute z-50 top-[50%] md:ml-24 ml-6 w-[50%]">
           <HeroTitleImage src="/cansat/CansatLogo.png" link="/cansat" />
-          <Link href="/cansat">
-            <LearnMore className="md:ml-12"/>
-          </Link>
+            <LearnMore className="md:ml-12" link="/cansat"/>
         </div>
         <HeroImage src="/cansat/CansatHeroImage3.jpg" />
       </div>
