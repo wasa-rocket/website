@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionTitle from "../sectionTitle";
 import Link from "next/link";
 import {
+  type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -11,8 +12,25 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import EventItem from "./eventItem";
+import SlideShowDot from "./slideShowDot";
+import { useState, useEffect } from "react";
 
 export default function Calendar() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   const events = [
     {
       src: "/career/calendar/events/session.jpg",
@@ -168,7 +186,7 @@ export default function Calendar() {
         height="1000"
         className="max-w-xl mx-auto w-[80%]"
       />
-      <Carousel className="max-w-xl mx-auto my-24 w-[80%]">
+      <Carousel className="max-w-xl mx-auto my-24 w-[80%]" setApi={setApi}>
         <CarouselContent>
           {events.map((event, index) => (
             <CarouselItem key={index}>
@@ -182,6 +200,11 @@ export default function Calendar() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="flex flex-row mx-auto justify-evenly w-[150px] mt-6">
+          {events.map((event, index) => (
+            <SlideShowDot black={index === current}/>
+          ))}
+        </div>
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
