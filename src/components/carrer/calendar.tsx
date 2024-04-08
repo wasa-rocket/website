@@ -201,9 +201,10 @@ export default function Calendar() {
           ))}
         </CarouselContent>
         <div className="flex flex-row mx-auto justify-evenly w-[150px] mt-6">
-          {events.map((event, index) => (
-            <SlideShowDot black={index === current}/>
-          ))}
+          {events.map((event, index) => {
+            //return <SlideShowDot black={index === current} />;
+            return <h1>hello!</h1>;
+          })}
         </div>
         <CarouselPrevious />
         <CarouselNext />
