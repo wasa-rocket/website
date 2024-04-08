@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import EventItem from "./eventItem";
-import SlideShowDot from "./slideShowDot";
+//import SlideShowDot from "./slideShowDot";
 import { useState, useEffect } from "react";
 
 export default function Calendar() {
