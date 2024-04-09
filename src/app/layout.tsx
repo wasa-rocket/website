@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+});
 
 export const metadata: Metadata = {
   title: "WASA Rocket",
@@ -18,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="darkMode">
-      <body className={inter.className}>
-        {children}
-        <Header />
-        <Footer />
-      </body>
+      <body className={notoSansJP.className}>{children}</body>
     </html>
   );
 }

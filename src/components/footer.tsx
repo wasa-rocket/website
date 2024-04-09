@@ -25,7 +25,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer>
+    <footer className="mb-20">
       <Image
         src="/logo/logoWide_50.png"
         alt="logo"
@@ -50,6 +50,9 @@ export default function Footer() {
           );
         })}
       </ul>
+      <p className="text-center mx-auto">
+        Look for <Link href="/credits" className="underline">Image Credits</Link>
+      </p>
     </footer>
   );
 }

@@ -3,9 +3,11 @@ import { easeInOut, motion } from "framer-motion";
 export function ShowFromDown({
   children,
   isInView,
+  className="",
 }: {
   children: React.ReactNode;
   isInView: boolean;
+  className?: string;
 }) {
   return (
     <motion.div
@@ -15,6 +17,7 @@ export function ShowFromDown({
       }}
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.5, ease: "easeInOut" }}
+      className={className}
     >
       {children}
     </motion.div>

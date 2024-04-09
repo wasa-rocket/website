@@ -26,7 +26,7 @@ export default function SideBar({
       transition={{ duration: 0.25, delay: 0.1, ease: "easeInOut" }}
       className="absolute h-screen right-0 bg-black bg-clip-padding backdrop-blur-md bg-opacity-70 backdrop-filter w-[250px] z-30 pt-12"
     >
-      <ul>
+      <ul className="w-full">
         {sideMenuElementsHidden.map((element) => {
           return (
             <SideBarItem

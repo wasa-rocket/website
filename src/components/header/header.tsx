@@ -21,7 +21,7 @@ export default function Header() {
   ];
   const sideMenuElements: Element[] = [
     { title: "About us", link: "/about" },
-
+    { title: "Posts", link: "/posts" },
     { title: "Career", link: "/career" },
   ];
 
@@ -73,16 +73,21 @@ export default function Header() {
         sideMenuElementsHidden={sideMenuElementsHidden}
         sideMenuHidden={sideMenuHidden}
       />
-        {pathname !== "/career" && (
-      <Alert navHidden={navHidden}>
+      {pathname !== "/career" && (
+        <Alert navHidden={navHidden}>
           <span>
             WASAでは新入生を歓迎しています。
-            <Link href="/career" className="underline  hover:text-gray-300">
+            <Link
+              href="/career"
+              className="underline  hover:text-gray-300"
+              aria-label="Read more about career"
+            >
               新歓情報を見る{`>`}
             </Link>
           </span>
-      </Alert>
-        )}
+        </Alert>
+      )}
     </motion.section>
+
   );
 }

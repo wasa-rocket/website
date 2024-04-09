@@ -6,6 +6,10 @@ body {
   color: rgb(255, 255, 255);
   background: rgb(0, 0, 0);
 }
+.light {
+  color: rgb(40, 40, 40);
+  background: rgb(255, 255, 255);
+}
 
 @layer utilities {
   .text-balance {
