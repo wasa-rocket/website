@@ -1,4 +1,3 @@
-/*
 type Props = {
   black: boolean;
 };
@@ -15,4 +14,3 @@ export default function SlideShowDot({ black }: Props) {
     </svg>
   );
 }
-*/

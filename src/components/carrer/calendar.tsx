@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import EventItem from "./eventItem";
-//import SlideShowDot from "./slideShowDot";
+import SlideShowDot from "./slideShowDot";
 import { useState, useEffect } from "react";
 
 export default function Calendar() {
@@ -202,8 +202,7 @@ export default function Calendar() {
         </CarouselContent>
         <div className="flex flex-row mx-auto justify-evenly w-[150px] mt-6">
           {events.map((event, index) => {
-            //return <SlideShowDot black={index === current} />;
-            return <h1>hello!</h1>;
+            return <SlideShowDot black={index === current} />;
           })}
         </div>
         <CarouselPrevious />
