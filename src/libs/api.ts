@@ -11,3 +11,18 @@ export async function getPostsbyId(id: string) {
   const data = await client.get({ endpoint: "posts", contentId: id });
   return data as PostContent;
 }
+
+export async function getRockoon() {
+  const data = await client.get({ endpoint: "projects", contentId: "rockoon" });
+  return data;
+}
+
+export async function getRocket() {
+  const data = await client.get({ endpoint: "projects", contentId: "rocket" });
+  return data;
+}
+
+export async function getCansat() {
+  const data = await client.get({ endpoint: "projects", contentId: "cansat" });
+  return data;
+}

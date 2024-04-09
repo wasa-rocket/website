@@ -10,9 +10,9 @@ export default function Rocket() {
         <div className="absolute z-50 md:top-[50%] top-[60%] md:ml-24 ml-6 w-[50%]">
           {/* <HeroTitleH2 title="ROCKET" /> */}
           <HeroTitleImage src="/rocket/RocketLogo.png" link="/rocket" />
-          <LearnMore className="md:ml-12" link="/rocket"/>
+          <LearnMore className="md:ml-12" link="/rocket" />
         </div>
-        <HeroImage src="/rocket/RocketHeroImage2.jpg" />
+        <HeroImage src="/rocket/RocketHeroImage2.jpg" alt="Rocket Hero Image" />
       </div>
     </section>
   );

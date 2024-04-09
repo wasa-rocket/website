@@ -8,3 +8,13 @@ export type PostContent = {
   body: string;
   description: string;
 };
+
+export type ProjectContent = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  title: string;
+  body: string;
+};
