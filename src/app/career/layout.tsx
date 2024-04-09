@@ -1,6 +1,6 @@
 "use client";
 
-import CareerLoader from "@/components/carrer/CareerLoader";
+import CareerLoader from "@/components/career/CareerLoader";
 import Footer from "@/components/footer";
 import Header from "@/components/header/header";
 import { Noto_Sans_JP } from "next/font/google";
