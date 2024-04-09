@@ -11,7 +11,7 @@ function CareerHero() {
         autoPlay
         loop
         muted
-        className="md:object-cover object-contain z-0 absolute w-full h-full"
+        className="object-cover z-0 absolute w-full h-full"
         playsInline
       />
       <div className="absolute inset-0 flex justify-end">
@@ -20,7 +20,7 @@ function CareerHero() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, x: [80, 0] }}
-              transition={{ duration: 0.5, delay: 0.25 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               「意思」を、
             </motion.p>
@@ -36,7 +36,7 @@ function CareerHero() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, x: [80, 0] }}
-              transition={{ duration: 0.5, delay: 0.25 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               打ち上げろ
             </motion.p>
