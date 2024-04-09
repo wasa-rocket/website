@@ -21,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="darkMode">
-      <body className={notoSansJP.className}>
-        {children}
-        <Header />
-        <Footer />
-      </body>
+      <body className={notoSansJP.className}>{children}</body>
     </html>
   );
 }
