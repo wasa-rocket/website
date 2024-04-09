@@ -189,7 +189,7 @@ export default function Calendar() {
       <Carousel className="max-w-xl mx-auto my-24 w-[80%]" setApi={setApi}>
         <CarouselContent>
           {events.map((event, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem key={event.title}>
               <EventItem
                 src={event.src}
                 alt={event.alt}
@@ -202,7 +202,7 @@ export default function Calendar() {
         </CarouselContent>
         <div className="flex flex-row mx-auto justify-evenly w-[150px] mt-6">
           {events.map((event, index) => {
-            return <SlideShowDot black={index === current} />;
+            return <SlideShowDot black={index === current} key={event.title} />;
           })}
         </div>
         <CarouselPrevious />
