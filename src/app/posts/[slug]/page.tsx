@@ -19,13 +19,12 @@ export default function Page({ params }: Params) {
   }
 
   return (
-    <div className="pt-36 md:max-w-screen-sm max-w-[90%] mx-auto min-h-screen">
-      <h1>{post.title}</h1>
-      <p>{post.date}</p>
+    <div className="pt-36 md:max-w-screen-sm max-w-[90%] mx-auto min-h-screen markdown">
+      <h1 className="inline">{post.title}</h1>
+      <p className="text-gray-400">{post.date}</p>
       <Markdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw, rehypeSanitize]}
-        className="markdown"
       >
         {post.content || "content not found"}
       </Markdown>
