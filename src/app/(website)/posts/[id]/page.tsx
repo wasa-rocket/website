@@ -9,7 +9,6 @@ type Params = {
 };
 
 export default async function Page({ params }: Params) {
-  console.log(postStyles);
   const post = await getPostsbyId(params.id);
   if (!post) {
     return <h1>file not found</h1>;

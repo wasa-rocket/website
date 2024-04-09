@@ -15,7 +15,7 @@ function CareerHero() {
         playsInline
       />
       <div className="absolute inset-0 flex justify-end">
-        <div className="mt-10 text-white md:text-9xl font-bold text-7xl m-5 [writing-mode:vertical-rl] flex flex-col md:gap-10">
+        <div className="mt-10 text-white md:text-8xl font-bold text-7xl m-5 [writing-mode:vertical-rl] flex flex-col md:gap-10">
           <div className="relative block mb-auto overflow-hidden">
             <motion.p
               initial={{ opacity: 0 }}
