@@ -9,7 +9,7 @@ export default function Page() {
       {allPosts.map((post) => (
         <div key={post.slug} className="my-12">
           <Link href={`/posts/${post.slug}`}>
-            <h2 className="sm:text-2xl text-xl">{post.title}</h2>
+            <h2 className="sm:text-2xl text-xl hover:underline">{post.title}</h2>
           </Link>
           <span className="text-sm font-semibold text-gray-400">
             {post.date}
