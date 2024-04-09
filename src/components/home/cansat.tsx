@@ -13,7 +13,7 @@ export default function Cansat() {
           <HeroTitleImage src="/cansat/CansatLogo.png" link="/cansat" />
             <LearnMore className="md:ml-12" link="/cansat"/>
         </div>
-        <HeroImage src="/cansat/CansatHeroImage3.jpg" />
+        <HeroImage src="/cansat/CansatHeroImage3.jpg" alt="Cansat Hero Image"/>
       </div>
     </section>
   );

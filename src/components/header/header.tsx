@@ -21,7 +21,7 @@ export default function Header() {
   ];
   const sideMenuElements: Element[] = [
     { title: "About us", link: "/about" },
-
+    { title: "Posts", link: "/posts" },
     { title: "Career", link: "/career" },
   ];
 
@@ -53,42 +53,41 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header>
-      <motion.section
-        variants={{
-          visible: { y: 0 },
-          hidden: { y: "-100%" },
-        }}
-        animate={navHidden ? "hidden" : "visible"}
-        transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="fixed top-0 m-0 z-50 w-full"
-      >
-        <NavBar
-          menuElements={menuElements}
-          navHidden={navHidden}
-          sideMenuHidden={sideMenuHidden}
-          setsideMenuHidden={setsideMenuHidden}
-        />
-        <SideBar
-          sideMenuElements={sideMenuElements}
-          sideMenuElementsHidden={sideMenuElementsHidden}
-          sideMenuHidden={sideMenuHidden}
-        />
-        {pathname !== "/career" && (
-          <Alert navHidden={navHidden}>
-            <span>
-              WASAでは新入生を歓迎しています。
-              <Link
-                href="/career"
-                className="underline  hover:text-gray-300"
-                aria-label="Read more about career"
-              >
-                新歓情報を見る{`>`}
-              </Link>
-            </span>
-          </Alert>
-        )}
-      </motion.section>
-    </header>
+    <motion.section
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={navHidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="fixed top-0 m-0 z-50 w-full"
+    >
+      <NavBar
+        menuElements={menuElements}
+        navHidden={navHidden}
+        sideMenuHidden={sideMenuHidden}
+        setsideMenuHidden={setsideMenuHidden}
+      />
+      <SideBar
+        sideMenuElements={sideMenuElements}
+        sideMenuElementsHidden={sideMenuElementsHidden}
+        sideMenuHidden={sideMenuHidden}
+      />
+      {pathname !== "/career" && (
+        <Alert navHidden={navHidden}>
+          <span>
+            WASAでは新入生を歓迎しています。
+            <Link
+              href="/career"
+              className="underline  hover:text-gray-300"
+              aria-label="Read more about career"
+            >
+              新歓情報を見る{`>`}
+            </Link>
+          </span>
+        </Alert>
+      )}
+    </motion.section>
+
   );
 }
