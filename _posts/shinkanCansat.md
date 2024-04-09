@@ -1,9 +1,10 @@
 ---
 title: "新歓Cansat講座"
 excerpt: "
-Creating an interactive web application to facilitate equipment management for our robot projects."
+新歓のCansat講座用の説明資料です。新入生に見せてください。"
 date: "2024/04/09"
 ---
+
 ## 回路作成
 
 まずは回路を作りましょう！今回はブレッドボードを使用してモーターとモータードライバを接続する回路を作ります。
@@ -30,7 +31,7 @@ date: "2024/04/09"
 ### 基板の機体取り付け
 
 - 機体の上部にいい感じで取り付けてください。参考画像 ↓
-<img src="/posts/shinkanCansat/cansatImage.jpg" />
+  <img src="/posts/shinkanCansat/cansatImage.jpg" />
 
 ## スマホ取り付け
 
