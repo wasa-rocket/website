@@ -14,7 +14,6 @@ export default function BoxText({ title, description, setVisible }: Props) {
       <button
         className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br rounded-full px-4 py-2 text-xs"
         onClick={() => {
-          console.log("clicked");
           setVisible((prev) => !prev);
         }}
       >

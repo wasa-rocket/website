@@ -13,7 +13,6 @@ export default function Bento() {
   const [designVisible, setDesignVisible] = useState(false);
   const [fabricationVisible, setFabricationVisible] = useState(false);
   const [launchVisible, setLaunchVisible] = useState(false);
-  console.log(designVisible, fabricationVisible, launchVisible);
 
   const close = () => {
     setDesignVisible(false);
