@@ -12,7 +12,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [loadingAnimation, setLoadingAnimation] = useState(true);
+  const [loadingAnimation, setLoadingAnimation] = useState(false);
 
   return (
     <>

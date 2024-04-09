@@ -15,8 +15,8 @@ function CareerHero() {
         playsInline
       />
       <div className="absolute inset-0 flex justify-end">
-        <div className="mt-10 text-white md:text-9xl font-bold text-7xl m-5 [writing-mode:vertical-rl] flex md:flex-col flex-row md:gap-10">
-          <div className="relative block md:mb-auto overflow-hidden">
+        <div className="mt-10 text-white md:text-9xl font-bold text-7xl m-5 [writing-mode:vertical-rl] flex flex-col md:gap-10">
+          <div className="relative block mb-auto overflow-hidden">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, x: [80, 0] }}
@@ -32,7 +32,7 @@ function CareerHero() {
               className="absolute bg-white z-20 inset-0 w-full h-full"
             /> */}
           </div>
-          <div className="block md:mt-auto overflow-hidden">
+          <div className="block mt-auto overflow-hidden">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, x: [80, 0] }}
