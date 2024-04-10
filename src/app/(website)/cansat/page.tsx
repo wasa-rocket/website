@@ -7,7 +7,7 @@ export default async function Page() {
     <ProjectPage
       heroImageSrc="/cansat/CansatHeroImage3.jpg"
       heroImageAlt="Cansat hero image"
-      pageTitleSrc="/cansat/CansatLogo.png"
+      pageTitleSrc="/cansat/CansatTitleLogo2.png"
       pageTitleAlt="Cansat Title"
       content={content}
     />
