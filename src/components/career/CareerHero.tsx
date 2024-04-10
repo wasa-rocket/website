@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function CareerHero() {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full min-h-[640px] h-screen">
       <video
         src="/career/CareerHeroVideo.mp4"
         autoPlay

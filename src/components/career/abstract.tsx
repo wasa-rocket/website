@@ -11,8 +11,10 @@ import SlideShow from "./slideShow";
 
 export default function Abstract() {
   const imageList = [
-    { id: 1, src: "/career/2019tanekon01.JPG", alt: "picture of wasa" },
-    { id: 2, src: "/career/2019tanekon02.JPG", alt: "picture of wasa" },
+    { id: 1, src: "/career/slideshow/WASAjacket1.png", alt: "picture of wasa" },
+    { id: 2, src: "/career/slideshow/WASAjacket2.jpg", alt: "picture of wasa" },
+    { id: 3, src: "/career/slideshow/WASAjacket3.jpg", alt: "picture of wasa" },
+    { id: 4, src: "/career/slideshow/WASAbeach.jpeg", alt: "picture of wasa" },
   ];
   return (
     <section className="sm:mb-44 mb-28 mx-auto w-[80%] max-w-[1000px] tracking-wider ">
@@ -24,8 +26,6 @@ export default function Abstract() {
         <h2 className="font-semibold text-gray-700 mb-6">ABOUT US</h2>
         <p className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl mb-4 font-bold text-gray-800 tracking-tight lg:leading-tight md:leading-tight sm:leading-tight leading-tight">
           はじめまして。
-          <br />
-          楽しすぎるサークル、
           <br />
           WASAロケです。
         </p>
