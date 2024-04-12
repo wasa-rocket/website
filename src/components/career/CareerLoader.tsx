@@ -10,12 +10,12 @@ function CareerLoader({
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingAnimation(false);
-    }, 4000);
+    }, 100);
     return () => clearTimeout(timer);
   });
   return (
     <>
-      <div>CareerLoader</div>
+      <div className="text-black text-4xl">CareerLoader</div>
     </>
   );
 }
