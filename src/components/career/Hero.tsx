@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Banner() {
   return (
-    <section className="relative xl:h-[70vh] md:h-[40vh] h-[20vh] w-screen text-white">
+    <section className="relative xl:h-[70vh] md:h-[50vh] h-[40vh] w-screen text-white">
       <video
         src="/career/CareerHeroVideo.mp4"
         autoPlay
@@ -17,7 +17,7 @@ function Banner() {
       />
       <div className="absolute z-10 inset-0 opacity-40 bg-gray-500"></div>
       <div className="absolute h-full w-full overflow-hidden flex flex-col ml-3 z-20">
-        <div className="h-1/2 overflow-hidden">
+        <div className="h-1/2 overflow-hidden flex items-center">
           <motion.p
             className="xl:text-[15rem] md:text-[9rem] text-[4.5rem] font-medium leading-none whitespace-nowrap"
             initial={{ opacity: 1 }}
@@ -27,7 +27,7 @@ function Banner() {
             [意思]を、
           </motion.p>
         </div>
-        <div className="h-1/2 overflow-hidden">
+        <div className="h-1/2 overflow-hidden flex items-start">
           <motion.p
             className="xl:text-[15rem] md:text-[9rem] text-[4.5rem] font-medium leading-none whitespace-nowrap"
             initial={{ opacity: 1 }}
