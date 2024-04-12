@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function CareerHero() {
+function Hero() {
   return (
     <section className="relative w-full min-h-[640px] h-screen">
       <video
@@ -47,4 +47,4 @@ function CareerHero() {
   );
 }
 
-export default CareerHero;
+export default Hero;
