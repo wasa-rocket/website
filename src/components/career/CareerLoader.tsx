@@ -10,7 +10,7 @@ function CareerLoader({
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingAnimation(false);
-    }, 100);
+    }, 5000);
     return () => clearTimeout(timer);
   });
   return (
