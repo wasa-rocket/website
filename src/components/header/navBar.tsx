@@ -9,6 +9,7 @@ type Props = {
   navHidden: boolean;
   sideMenuHidden: boolean;
   setsideMenuHidden: Dispatch<SetStateAction<boolean>>;
+  isDarkTheme: boolean;
 };
 
 export default function NavBar({
@@ -16,9 +17,15 @@ export default function NavBar({
   navHidden,
   sideMenuHidden,
   setsideMenuHidden,
+  isDarkTheme,
 }: Props) {
   return (
-    <nav className="bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 md:h-auto h-16">
+    <nav
+      className={
+        ` bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 md:h-auto h-16` +
+        (isDarkTheme ? ` bg-black` : ` bg-gray-300`)
+      }
+    >
       <ul className="flex flex-row justify-between md:w-[80%] max-w-[400px] ml-12">
         <motion.li
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
@@ -29,7 +36,11 @@ export default function NavBar({
         >
           <Link href="/" aria-label="Go to home page">
             <Image
-              src="/logo/logoBold_25.png"
+              src={
+                isDarkTheme
+                  ? `/logo/logoBold_25_white.png`
+                  : `/logo/logoBold_25_black.png`
+              }
               alt="logo"
               width={100}
               height={100}
@@ -48,7 +59,10 @@ export default function NavBar({
             >
               <Link
                 href={element.link}
-                className="text-sm md:block hidden text-white font-semibold text-left tracking-wider my-4"
+                className={
+                  `text-sm md:block hidden font-semibold text-left tracking-wider my-4` +
+                  (isDarkTheme ? ` text-white` : ` text-black`)
+                }
                 aria-label={`go to ${element.title} page`}
               >
                 {element.title}
@@ -64,7 +78,11 @@ export default function NavBar({
       >
         <Link href="/" className="md:hidden block ">
           <Image
-            src="/logo/logoBoldWide_25.png"
+            src={
+              isDarkTheme
+                ? `/logo/logoBoldWide_25_White.png`
+                : `/logo/logoBoldWide_25_Black.png`
+            }
             alt="logo"
             width={180}
             height={100}
@@ -82,7 +100,11 @@ export default function NavBar({
         }}
         aria-label="Open hamburger menu"
       >
-        <MenuButton isOpen={!sideMenuHidden} color="white" strokeWidth={2} />
+        <MenuButton
+          isOpen={!sideMenuHidden}
+          color={isDarkTheme ? `"white` : `black`}
+          strokeWidth={2}
+        />
       </motion.button>
     </nav>
   );

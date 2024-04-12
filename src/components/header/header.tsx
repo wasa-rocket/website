@@ -13,7 +13,9 @@ export type Element = {
   link: string;
 };
 
-export default function Header() {
+type Props = { isDarkTheme: boolean };
+
+export default function Header({ isDarkTheme }: Props) {
   const menuElements: Element[] = [
     { title: "ROCKOON", link: "/rockoon" },
     { title: "ROCKET", link: "/rocket" },
@@ -67,11 +69,13 @@ export default function Header() {
         navHidden={navHidden}
         sideMenuHidden={sideMenuHidden}
         setsideMenuHidden={setsideMenuHidden}
+        isDarkTheme={isDarkTheme}
       />
       <SideBar
         sideMenuElements={sideMenuElements}
         sideMenuElementsHidden={sideMenuElementsHidden}
         sideMenuHidden={sideMenuHidden}
+        isDarkTheme={isDarkTheme}
       />
       {pathname !== "/career" && (
         <Alert navHidden={navHidden}>
@@ -88,6 +92,5 @@ export default function Header() {
         </Alert>
       )}
     </motion.section>
-
   );
 }

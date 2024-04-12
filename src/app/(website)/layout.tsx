@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <>
       {children}
-      <Header />
+      <Header isDarkTheme={true} />
       <Footer />
     </>
   );
