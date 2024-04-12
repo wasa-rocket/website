@@ -40,28 +40,28 @@ function Banner() {
       </div>
       <div className="absolute inset-0 z-20">
         <div className="flex flex-row justify-end md:mt-3 mt-[-50px] h-26 mr-5">
-          <div className="flex flex-col items-center overflow-hidden text-black md:text-white">
-            {/* <motion.p
+          <div className="flex flex-col items-center text-black md:text-white">
+            <motion.p
               className="xl:text-[2rem] md:text-[1.5rem] whitespace-nowrap md:block hidden"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1, y: [-32, 0] }}
-              transition={{ duration: 1.0, delay: 1.6 }}
-            > */}
-            <p className="xl:text-[2rem] md:text-[1.5rem] whitespace-nowrap md:block hidden">
-              WASA Rocket
-            </p>
-            {/* </motion.p> */}
-            <div className=" bg-blue-500 xl:h-1 h-[0.1rem] w-full" />
-            {/* <motion.p
-              className="xl:text-[2rem] text-[1.5rem] whitespace-nowrap"
-              initial={{ opacity: 0 }}
               animate={{ opacity: 1, y: [32, 0] }}
-              transition={{ duration: 1.0, delay: 1.6 }}
-            > */}
-            <p className="xl:text-[2rem] text-[1.5rem] whitespace-nowrap">
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              {/* <p className="xl:text-[2rem] md:text-[1.5rem] whitespace-nowrap md:block hidden"> */}
+              WASA Rocket
+              {/* </p> */}
+            </motion.p>
+            <div className=" bg-blue-500 xl:h-1 h-[0.1rem] w-full" />
+            <motion.p
+              className="xl:text-[2rem] text-[1.5rem] whitespace-nowrap"
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1, y: [32, 0] }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              {/* <p className="xl:text-[2rem] text-[1.5rem] whitespace-nowrap"> */}
               新歓2024
-            </p>
-            {/* </motion.p> */}
+              {/* </p> */}
+            </motion.p>
           </div>
           {/* <motion.div
             initial={{ opacity: 0 }}
