@@ -16,7 +16,7 @@ function Banner() {
         playsInline
       />
       <div className="absolute z-10 inset-0 opacity-40 bg-gray-500"></div>
-      <div className="absolute h-full w-full overflow-hidden flex flex-col ml-3 z-20">
+      <div className="absolute h-full w-full overflow-hidden flex flex-col ml-2 z-20">
         <div className="h-1/2 overflow-hidden flex items-center">
           <motion.p
             className="xl:text-[15rem] md:text-[9rem] text-[4.5rem] font-medium leading-none whitespace-nowrap"
