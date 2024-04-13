@@ -102,7 +102,7 @@ export default function NavBar({
       >
         <MenuButton
           isOpen={!sideMenuHidden}
-          color={isDarkTheme ? `"white` : `black`}
+          color={isDarkTheme ? `white` : `black`}
           strokeWidth={2}
         />
       </motion.button>
