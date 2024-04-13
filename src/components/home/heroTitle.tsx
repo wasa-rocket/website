@@ -6,7 +6,15 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { HoverPop, ShowFromDown } from "../motionEffects";
 
-export function HeroTitleImage({ src, link }: { src: string; link: string }) {
+export function HeroTitleImage({
+  src,
+  alt,
+  link,
+}: {
+  src: string;
+  alt: string;
+  link: string;
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -17,7 +25,7 @@ export function HeroTitleImage({ src, link }: { src: string; link: string }) {
             <Image
               src={src}
               ref={ref}
-              alt="Picture of the author"
+              alt={alt}
               width="700"
               height="300"
               style={{
