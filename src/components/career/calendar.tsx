@@ -62,7 +62,7 @@ export default function Calendar() {
       fit: false,
       description: (
         <>
-          モデルロケット・Cansatの製作体験を行います
+          モデルロケット・Cansatの制作体験を行います
           <br />
           WASAでの活動で私たちが開発しているモデルロケット・Cansatを実際に作って、動かしてみませんか？
           <br />
@@ -101,29 +101,6 @@ export default function Calendar() {
             className="underline text-blue-600"
           >
             宇宙航空ツアーに応募する
-          </Link>
-        </>
-      ),
-    },
-    {
-      src: "/career/calendar/events/LetsEat.jpg",
-      alt: "dinner event image",
-      title: "合同説明会＋食事会",
-      fit: true,
-      description: (
-        <>
-          WASAのロケット、鳥人間、天文プロジェクト合同企画で説明会、食事会を開催します！
-          <br />
-          説明会でWASAを知った後、みんなで食事をしましょう！ ※抽選30名
-          <br />
-          ※500円現金でご持参ください
-          <br />
-          <Link
-            aria-label="Link to the form to apply for the dinner event"
-            href="https://forms.gle/Ao5y2U1RYp83K2ts5"
-            className="underline text-blue-600"
-          >
-            食事会に応募する
           </Link>
         </>
       ),
@@ -170,6 +147,55 @@ export default function Calendar() {
             className="underline text-blue-600"
           >
             文系会に応募する
+          </Link>
+        </>
+      ),
+    },
+    {
+      src: "/career/calendar/events/recreation.png",
+      alt: "recreation image",
+      title: "レク会",
+      fit: true,
+      description: (
+        <>
+          宇宙飛行士もやったゲームに挑戦！一緒に遊んで現役メンバーと盛り上がろう！
+          <br />
+          場所：学生会館 <br />
+          日時
+          <br />
+          4/22(月) 19:00~
+          <br />
+          4/26(金) 19:00~
+          <br />
+          <Link
+            aria-label="Link to the form to apply for the recreation event"
+            href="https://forms.gle/4gzqe2C3tApHwDma6"
+            className="underline text-blue-600"
+          >
+            レク会に応募する
+          </Link>
+        </>
+      ),
+    },
+    {
+      src: "/career/calendar/events/pizzaparty.jpg",
+      alt: "pizza party image",
+      title: "歓迎会",
+      fit: true,
+      description: (
+        <>
+          WASAロケに入りたい仲間と出会いましょう！
+          <br />
+          ロケに入るかわからないけど人と話したいという人も大歓迎！
+          <br />
+          先輩たちの活動も、新入生同士のつながりも作れます！ 来週末（20日）です
+          <br />
+          <Link
+            aria-label="Link to the form to apply for the pizza party event"
+            href="https://t.co/B4vM2wuITG"
+            className="underline text-blue-600"
+          >
+            歓迎会に応募する
           </Link>
         </>
       ),
