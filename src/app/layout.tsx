@@ -9,7 +9,8 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: "WASA Rocket",
-  description: "WASA Rocket Offical Website",
+  description:
+    "WASA Rocket Offical Website. WASA Rocket is a student organization at Waseda University that develops and launches rockets. WASAロケット（通称ワサロケ）の公式サイトです。このサイトではワサロケに関する情報を日々発信しています！",
 };
 
 export default function RootLayout({
