@@ -7,7 +7,7 @@ export default async function Page() {
     <ProjectPage
       heroImageSrc="/rocket/RocketHeroImage2.jpg"
       heroImageAlt="Rocket hero image"
-      pageTitleSrc="/rocket/RocketLogo.png"
+      pageTitleSrc="/rocket/RocketLogoFull.png"
       pageTitleAlt="Rocket Title"
       content={content}
     />
