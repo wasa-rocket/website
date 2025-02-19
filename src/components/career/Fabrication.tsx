@@ -46,7 +46,7 @@ function Fabrication() {
     //   </div>
     // </section>
     <WorkflowMordalContainer
-      title="制作"
+      title="製作"
       description={
         <>
           製作は主に構造部と電装部に分けられ、各メンバーの得意分野や興味のある分野に基づいて分担して作業を進めます。メンバーのレベルを問わず、チームで協力して作業を進めていきます。
