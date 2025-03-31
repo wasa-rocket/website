@@ -25,7 +25,6 @@ export default function SideBarItem({
       }}
       animate={sideMenuHidden ? "hidden" : "visible"}
       transition={{ duration: 0.5, delay: 0.3 }}
-      onClick={() => router.push(element.link)}
       className="w-full"
     >
       <Link
@@ -36,9 +35,34 @@ export default function SideBarItem({
             hiddenWhenMd ? "md:hidden" : ""
           }` + (isDarkTheme ? ` text-white` : ` text-black`)
         }
+        onClick={(e) => {
+          if (element.socialLinks && element.link === "#") {
+            e.preventDefault();
+          }
+        }}
       >
         {element.title}
       </Link>
+      
+      {element.socialLinks && (
+        <div className={`w-[80%] ml-auto mr-4 ${hiddenWhenMd ? "md:hidden" : ""}`}>
+          {element.socialLinks.map((social) => (
+            <Link
+              key={social.platform}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${element.title} ${social.platform} link`}
+              className={
+                `p-1.5 text-xs text-right tracking-wider hover:text-gray-300 block` +
+                (isDarkTheme ? ` text-white` : ` text-black`)
+              }
+            >
+              {social.platform}
+            </Link>
+          ))}
+        </div>
+      )}
     </motion.li>
   );
 }
