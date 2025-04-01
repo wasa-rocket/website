@@ -8,9 +8,15 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import NavBar from "./navBar";
 import SideBar from "./sideBar";
 
+export type SocialLink = {
+  platform: string;
+  url: string;
+};
+
 export type Element = {
   title: string;
   link: string;
+  socialLinks?: SocialLink[];
 };
 
 type Props = { isDarkTheme: boolean };
@@ -25,6 +31,24 @@ export default function Header({ isDarkTheme }: Props) {
     { title: "About us", link: "/about" },
     { title: "Posts", link: "/posts" },
     { title: "Career", link: "/career" },
+    { 
+      title: "WASA鳥人間", 
+      link: "#",
+      socialLinks: [
+        { platform: "HP", url: "https://wasa-birdman.com/" },
+        { platform: "X", url: "https://x.com/wasa_birdman" },
+        { platform: "Instagram", url: "https://www.instagram.com/wasa.bird_info/" },
+        { platform: "Youtube", url: "https://www.youtube.com/@WASABirdman" }
+      ]
+    },
+    {
+      title: "WASA天文",
+      link: "#",
+      socialLinks: [
+        { platform: "X", url: "https://x.com/wasa_tenmon_pro" },
+        { platform: "Instagram", url: "https://www.instagram.com/wasa_tenmon_pro/" }
+      ]
+    }
   ];
 
   const sideMenuElementsHidden: Element[] = [
