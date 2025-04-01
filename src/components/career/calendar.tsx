@@ -212,7 +212,8 @@ export default function Calendar() {
         height="1000"
         className="max-w-xl mx-auto w-[80%]"
       />
-      <Carousel className="max-w-xl mx-auto my-24 w-[80%]" setApi={setApi}>
+      {/* uncomment the section below to visualize the Events*/}
+      {/* <Carousel className="max-w-xl mx-auto my-24 w-[80%]" setApi={setApi}>
         <CarouselContent>
           {events.map((event, index) => (
             <CarouselItem key={event.title}>
@@ -233,7 +234,7 @@ export default function Calendar() {
         </div>
         <CarouselPrevious />
         <CarouselNext />
-      </Carousel>
+      </Carousel> */}
     </section>
   );
 }
