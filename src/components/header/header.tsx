@@ -32,6 +32,16 @@ export default function Header({ isDarkTheme }: Props) {
     { title: "Posts", link: "/posts" },
     { title: "Career", link: "/career" },
     { 
+      title: "WASAロケット", 
+      link: "#",
+      socialLinks: [
+        { platform: "X", url: "https://x.com/wasa_rocket" },
+        { platform: "Instagram", url: "https://www.instagram.com/wasa_rocket_pro/" },
+        { platform: "Youtube", url: "https://www.youtube.com/user/wasarocketpro" },
+        { platform: "LINE", url: "https://line.me/ti/g2/er8zyh7JR6tKFvlILP2XqbyGV0wL-AbxkyzlUw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" }
+      ]
+    },
+    { 
       title: "WASA鳥人間", 
       link: "#",
       socialLinks: [
