@@ -59,7 +59,7 @@ function Banner() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               {/* <p className="xl:text-[2rem] text-[1.5rem] whitespace-nowrap"> */}
-              新歓2024
+              新歓2025
               {/* </p> */}
             </motion.p>
           </div>

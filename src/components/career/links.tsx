@@ -4,7 +4,7 @@ import LinkItem from "./linkItem";
 export default function Links() {
   const linkContents = [
     {
-      link: "https://twitter.com/wasa_rocket2024",
+      link: "https://twitter.com/wasa_rocket2025",
       imgSrc: "/socialMediaIcons/x.svg",
       imgAlt: "X icon",
       children: (
@@ -16,7 +16,7 @@ export default function Links() {
       ),
     },
     {
-      link: "https://line.me/ti/g2/sw9CttRGTQTNn0r3sgTp29QxwdN_ugZL15j9bw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
+      link: "https://line.me/ti/g2/er8zyh7JR6tKFvlILP2XqbyGV0wL-AbxkyzlUw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
       imgSrc: "/socialMediaIcons/line.svg",
       imgAlt: "Line Openchat",
       children: (
