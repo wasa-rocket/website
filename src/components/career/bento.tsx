@@ -70,12 +70,12 @@ export default function Bento() {
           className="md:aspect-[5/4] sm:aspect-[7/4] aspect-[4/5] col-span-3"
         >
           <BoxText
-            title="制作"
+            title="製作"
             description={
               <>
                 チームで協力してアイデアを形にしよう！
                 <br />
-                ロケット制作には様々な工程があります。きっとあなたにあった作業が見つかるはず！
+                ロケット製作には様々な工程があります。きっとあなたにあった作業が見つかるはず！
               </>
             }
             setVisible={setFabricationVisible}
@@ -102,7 +102,7 @@ export default function Bento() {
           <BoxText
             title="打ち上げ"
             description={
-              <>WASAでは毎年様々な大会に出場して制作物を発表しています！</>
+              <>WASAでは毎年様々な大会に出場して製作物を発表しています！</>
             }
             setVisible={setLaunchVisible}
           />
